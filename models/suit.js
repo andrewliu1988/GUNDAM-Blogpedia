@@ -1,15 +1,10 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const { Schema } = require('mongoose')
 
-const Mobile_suit = new Schema(
+const Suit = new Schema(
   {
     model: {
       type: String,
       required: true
-    },
-    pilot: {
-      type: Schema.Types.ObjectId,
-      ref: 'pilot_id'
     },
     weapons: {
       type: String,
@@ -23,12 +18,12 @@ const Mobile_suit = new Schema(
       type: String,
       required: true
     },
-    series_id: {
+    show_id: {
       type: Schema.Types.ObjectId,
-      ref: 'series_id'
+      ref: 'shows'
     }
   },
   { timestamps: true }
 )
 
-module.exports = mongoose.model('mobileSuits', Mobile_suit)
+module.exports = Suit

@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const { Schema } = require('mongoose')
 
 const Pilot = new Schema(
   {
@@ -11,9 +10,9 @@ const Pilot = new Schema(
       type: String,
       required: true
     },
-    mobile_suit: {
+    suit_id: {
       type: Schema.Types.ObjectId,
-      ref: 'mobileSuit_id'
+      ref: 'suits'
     },
     media_url: {
       type: String,
@@ -23,12 +22,12 @@ const Pilot = new Schema(
       type: String,
       required: true
     },
-    series_id: {
+    show_id: {
       type: Schema.Types.ObjectId,
-      ref: 'series_id'
+      ref: 'shows'
     }
   },
   { timestamps: true }
 )
 
-module.exports = mongoose.model('pilots', Pilot)
+module.exports = Pilot

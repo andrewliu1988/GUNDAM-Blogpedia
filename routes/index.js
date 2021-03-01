@@ -1,11 +1,21 @@
-const { Router } = require('express')
-const showControllers = require('../controllers/index')
+const Router = require('express').Router()
 
-const router = Router()
+//import individual router
 
-router.get('/', (req, res) => res.send('This is root!'))
+const ShowRouter = require('./ShowRouter')
+const SuitRouter = require('./SuitRouter')
+const PilotRouter = require('./PilotRouter')
+// const CommentRouter = require('./CommentRouter')
 
-router.post('/createShow', showControllers.createShow)
-router.get('/getAllShows', showControllers.getShows)
+//use the router and give them paths
 
-module.exports = router
+Router.use('/show', ShowRouter)
+Router.use('/suit', SuitRouter)
+Router.use('/pilot', PilotRouter)
+// Router.use('/comment', CommentRouter)
+
+//Any route in the individual router would be added onto these path
+
+Router.get('/', (req, res) => res.send('This is root!'))
+
+module.exports = Router

@@ -1,7 +1,6 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const { Schema } = require('mongoose')
 
-const Series = new Schema(
+const Serie = new Schema(
   {
     title: {
       type: String,
@@ -20,4 +19,4 @@ const Series = new Schema(
   { timestamps: true }
 )
 
-module.exports = mongoose.model('series', Series)
+module.exports = Serie

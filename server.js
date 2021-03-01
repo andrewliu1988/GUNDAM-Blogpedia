@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./routes')
+const routes = require('./routes/index')
 const db = require('./db')
 const cors = require('cors')
 const bodyParser = require('body-parser')
