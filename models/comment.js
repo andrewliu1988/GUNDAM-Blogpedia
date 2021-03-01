@@ -1,23 +1,22 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Series = new Schema(
+const Comment = new Schema(
   {
-    title: {
+    Name: {
       type: String,
       required: true
     },
-    release_date: {
+    Comment: {
       type: String,
       required: true
     },
-    eps: {
+    media_url: {
       type: String,
       required: true
-    },
-    image: { type: String, required: true }
+    }
   },
   { timestamps: true }
 )
 
-module.exports = mongoose.model('series', Series)
+module.exports = mongoose.model('comments', Comment)
