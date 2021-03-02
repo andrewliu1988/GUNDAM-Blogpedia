@@ -1,6 +1,5 @@
 const Router = require('express').Router()
 const SuitController = require('../controllers/SuitController')
-const Suit = require('../models/suit')
 
 // routes go here
 
