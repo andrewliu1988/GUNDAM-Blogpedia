@@ -4,25 +4,82 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: blueviolet;
 }
 
 .seriesbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 10px;
+  justify-content: space-evenly;
+}
+
+.showCard {
   border: 1px solid black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  justify-content: center;
+  width: 400px;
 }
 
 .iconImage {
-  display: flex;
   width: 200px;
   height: 300px;
-  align-self: center;
-  justify-content: center;
 }
-
 .suitIcon {
   display: flex;
   width: 200px;
   height: 300px;
   align-self: center;
   justify-content: center;
+}
+
+.showDetails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  justify-content: space-evenly;
+  margin: 10vh;
+}
+
+.suitMedia {
+  width: 400px;
+  height: 400px;
+  justify-self: center;
+}
+
+.suitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.model,
+.weapons,
+.description {
+  margin-bottom: 20px;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  /* align-self: auto; */
+}
+
+.model {
+  align-self: start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+/* .weapons {
+  align-self: start;
+  margin-bottom: 20px;
+} */
+
+.description {
+  align-self: end;
+  margin-bottom: 20px;
 }

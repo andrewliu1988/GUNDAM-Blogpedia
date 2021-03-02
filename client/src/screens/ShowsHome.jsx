@@ -28,15 +28,19 @@ export default class ShowsHome extends Component {
 render() {
   console.log(this.state)
   return(
-    <div>
+    <div >
       <h1>Series</h1>
+      <div className="seriesbox">
       {this.state.allShows.map((result, index ) => (
         <ShowCard
         onClick={()=> this.props.history.push(`/suit/find/${result._id}`)}
         title={result.title}
         image={result.image}
+        release_date={result.release_date}
+        eps={result.eps}
         />
       ))}
+      </div>
     </div>
   )
 }

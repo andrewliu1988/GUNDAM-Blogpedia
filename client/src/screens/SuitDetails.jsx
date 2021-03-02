@@ -32,11 +32,14 @@ export default class SuitDetails extends Component {
   render() {
     const suitInfo = this.state.suitDetails
     return (
-      <div>
-        <img src={suitInfo.media_url} alt="media"/>
-        <h1>{suitInfo.model}</h1>
-        <p>{suitInfo.weapons}</p>
-        <p>{suitInfo.description}</p>
+      <div >
+        <h1>Suit Details</h1>
+        <section className="suitGrid">
+        <img src={suitInfo.media_url} alt="media" className="suitMedia"/>
+        <h1 className="model">{suitInfo.model}</h1>
+        <p className="weapons">{suitInfo.weapons}</p>
+        <p className="description">{suitInfo.description}</p>
+        </section>
       </div>
     )
   }

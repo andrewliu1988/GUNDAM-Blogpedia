@@ -57,10 +57,24 @@ const createPilot = async (req, res) => {
   }
 }
 
+const deleteSuit = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Suit.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Suit deleted')
+    }
+    throw new Error('Suit not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createSuit,
   getSuits,
   getSuitById,
   createPilot,
-  getSuitByShowId
+  getSuitByShowId,
+  deleteSuit
 }

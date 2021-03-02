@@ -34,6 +34,7 @@ export default class ShowDetails extends Component {
   return (
     <div>
       <h1>show details</h1>
+      <div className="showDetails">
       {this.state.allSuits.map((result, index) =>
        <SuitCard
         model={result.model}
@@ -41,6 +42,7 @@ export default class ShowDetails extends Component {
         onClick={()=> this.props.history.push(`/suit/${result._id}`)}
        />
       )}
+      </div>
     </div>
   )
 }
