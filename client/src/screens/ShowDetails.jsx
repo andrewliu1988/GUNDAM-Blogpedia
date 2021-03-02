@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, {Component} from 'react'
 import { BASE_URL } from '../globals'
-import PilotCard from '../components/PilotCard'
 import SuitCard from '../components/SuitCard'
 
 

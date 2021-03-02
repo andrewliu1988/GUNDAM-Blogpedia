@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ShowCard from '../components/ShowCard'
-import Globals, { BASE_URL } from '../globals'
+import { BASE_URL } from '../globals'
 
 export default class ShowsHome extends Component {
   constructor(props) {
