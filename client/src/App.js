@@ -4,11 +4,15 @@ import { Route, Switch } from 'react-router-dom'
 import ShowsHome from './screens/ShowsHome'
 import ShowDetails from './screens/ShowDetails'
 import SuitDetails from './screens/SuitDetails'
+import Nav from './components/Nav'
+import AllSuits from './screens/AllSuit'
+import AllPilots from './screens/AllPilot'
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <Nav />
         <main>
           <Switch>
             <Route exact path="/" component={ShowsHome} />
@@ -17,6 +21,8 @@ export default class App extends Component {
               path="/suit/:id"
               component={(props) => <SuitDetails {...props} />}
             />
+            <Route path="/suit" component={AllSuits} />
+            <Route path="/Pilot" component={AllPilots} />
           </Switch>
         </main>
       </div>
