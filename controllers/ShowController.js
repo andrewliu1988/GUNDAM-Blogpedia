@@ -42,9 +42,32 @@ const createSuit = async (req, res) => {
   }
 }
 
+const updateShow = async (req, res) => {
+  try {
+    const { id } = req.params
+    await Show.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true, upsert: true },
+      (err, show) => {
+        if (err) {
+          res.status(500).send(err)
+        }
+        if (!show) {
+          res.status(500).send('Show not found')
+        }
+        return res.status(200).json(show)
+      }
+    )
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createShow,
   getShows,
   getShowById,
-  createSuit
+  createSuit,
+  updateShow
 }

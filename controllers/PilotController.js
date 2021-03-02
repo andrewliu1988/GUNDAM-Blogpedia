@@ -21,8 +21,8 @@ const getPilots = async (req, res) => {
 const getPilotByShowId = async (req, res) => {
   try {
     console.log(req.params)
-    const { showId } = req.params
-    const pilot = await Pilot.find({ show_id: showId })
+    const showId = req.params.show_id
+    const pilot = await Pilot.find({ show_id: { $eq: showId } })
     return res.status(200).json({ pilot })
   } catch (error) {
     return res.status(500).send(error.message)

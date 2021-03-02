@@ -33,7 +33,7 @@ render() {
       <h1>Series</h1>
       {this.state.allShows.map((result, index ) => (
         <ShowCard
-        onClick={()=> this.props.history.push(``)}
+        onClick={()=> this.props.history.push(`/suit/find/${result._id}`)}
         title={result.title}
         image={result.image}
         />

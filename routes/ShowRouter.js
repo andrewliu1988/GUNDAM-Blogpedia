@@ -8,5 +8,6 @@ Router.post('/', ShowController.createShow)
 Router.get('/', ShowController.getShows)
 Router.get('/:id', ShowController.getShowById)
 Router.post('/:id/suit', ShowController.createSuit)
+Router.put('/update/:id', ShowController.updateShow)
 
 module.exports = Router

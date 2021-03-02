@@ -33,28 +33,12 @@ const getSuitById = async (req, res) => {
 const getSuitByShowId = async (req, res) => {
   try {
     const showId = req.params.show_id
-
-    console.log(req.params.show_id, 'req.params')
-    console.log(showId, 'show id')
-    // const suit = await Suit.find({ show_id: '603d4fac78b2f5763a8a550f' })
     const suit = await Suit.find({ show_id: { $eq: showId } })
     return res.status(200).json({ suit })
   } catch (error) {
     return res.status(500).send(error.message)
   }
 }
-
-// const getSuitByShowId = async (req, res) => {
-//   try {
-//     console.log(req.params, 'andrew')
-//     const { showId } = req.params
-//     const suit = await Suit.find({ description: { $eq: showId } })
-//     console.log(suit, 'empty suit')
-//     return res.status(200).json({ suit })
-//   } catch (error) {
-//     return res.status(500).send(error.message)
-//   }
-// }
 
 const createPilot = async (req, res) => {
   try {

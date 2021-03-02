@@ -21,10 +21,6 @@ const Suit = new Schema(
     show_id: {
       type: Schema.Types.ObjectId,
       ref: 'shows'
-    },
-    show_name: {
-      type: String,
-      required: true
     }
   },
   { timestamps: true }
