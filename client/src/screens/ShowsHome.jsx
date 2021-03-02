@@ -29,8 +29,11 @@ render() {
   console.log(this.state)
   return(
     <div>
+
+      <h1>Series</h1>
       {this.state.allShows.map((result, index ) => (
         <ShowCard
+        onClick={()=> this.props.history.push(``)}
         title={result.title}
         image={result.image}
         />
