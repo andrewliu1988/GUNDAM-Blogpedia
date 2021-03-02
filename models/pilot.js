@@ -10,9 +10,9 @@ const Pilot = new Schema(
       type: String,
       required: true
     },
-    suit_id: {
-      type: Schema.Types.ObjectId,
-      ref: 'suits'
+    mecha: {
+      type: String,
+      required: true
     },
     media_url: {
       type: String,

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, {Component} from 'react'
 import { BASE_URL } from '../globals'
 import SuitCard from '../components/SuitCard'
+import PilotCard from '../components/PilotCard'
 
 
 export default class ShowDetails extends Component {

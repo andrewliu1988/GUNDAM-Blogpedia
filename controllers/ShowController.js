@@ -1,4 +1,4 @@
-const { Show, Suit } = require('../models/index')
+const { Show, Suit, Pilot } = require('../models/index')
 
 const createShow = async (req, res) => {
   try {
@@ -42,6 +42,21 @@ const createSuit = async (req, res) => {
   }
 }
 
+const createPilot = async (req, res) => {
+  try {
+    const pilot = await new Pilot({
+      ...req.body,
+      show_id: req.params.id
+    })
+    await pilot.save()
+    return res.status(201).json({
+      pilot
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 const updateShow = async (req, res) => {
   try {
     const { id } = req.params
@@ -69,5 +84,6 @@ module.exports = {
   getShows,
   getShowById,
   createSuit,
-  updateShow
+  updateShow,
+  createPilot
 }

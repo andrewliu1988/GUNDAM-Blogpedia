@@ -14,4 +14,6 @@ Router.post('/:id/suit', ShowController.createSuit)
 
 Router.put('/update/:id', ShowController.updateShow)
 
+Router.post('/:id/pilot', ShowController.createPilot)
+
 module.exports = Router

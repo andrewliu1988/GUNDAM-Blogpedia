@@ -18,10 +18,10 @@ export default class SuitDetails extends Component {
   
   getSuitDetails = async () => {
     const suitId = this.props.match.params.id
-    console.log(suitId)
+    // console.log(suitId)
     try{
       const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
-      console.log(res, "andrew")
+      // console.log(res, "andrew")
       this.setState({suitDetails: res.data.suit})
     } catch (error){
       throw error
