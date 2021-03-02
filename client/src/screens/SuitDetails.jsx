@@ -22,7 +22,7 @@ export default class SuitDetails extends Component {
     try{
       const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
       console.log(res, "andrew")
-   
+      this.setState({suitDetails: res.data.suit})
     } catch (error){
       throw error
     }
@@ -30,9 +30,13 @@ export default class SuitDetails extends Component {
 
 
   render() {
+    const suitInfo = this.state.suitDetails
     return (
       <div>
-        <h1>Suit details</h1>
+        <img src={suitInfo.media_url} alt="media"/>
+        <h1>{suitInfo.model}</h1>
+        <p>{suitInfo.weapons}</p>
+        <p>{suitInfo.description}</p>
       </div>
     )
   }
