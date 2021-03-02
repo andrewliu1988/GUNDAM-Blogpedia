@@ -5,7 +5,7 @@ export default class PilotCard extends Component {
     const {model, mediaUrl, onClick} = this.props 
     return (
       <div className="seriesbox" onClick={onClick}>
-        <img src={mediaUrl} alt="gif"></img>
+        <img src={mediaUrl} alt="gif"className="suitIcon"></img>
         <h1>{model}</h1>
 
       </div>

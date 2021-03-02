@@ -39,6 +39,7 @@ export default class ShowDetails extends Component {
        <SuitCard
         model={result.model}
         mediaUrl={result.media_url}
+        onClick={()=> this.props.history.push(`/suit/${result._id}`)}
        />
       )}
     </div>
