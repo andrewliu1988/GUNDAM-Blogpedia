@@ -29,7 +29,6 @@ render() {
   console.log(this.state)
   return(
     <div>
-
       <h1>Series</h1>
       {this.state.allShows.map((result, index ) => (
         <ShowCard
@@ -37,9 +36,7 @@ render() {
         title={result.title}
         image={result.image}
         />
-
       ))}
-
     </div>
   )
 }

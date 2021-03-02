@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, {Component} from 'react'
 import { BASE_URL } from '../globals'
 import PilotCard from '../components/PilotCard'
+import SuitCard from '../components/SuitCard'
 
 
 export default class ShowDetails extends Component {
@@ -35,7 +36,7 @@ export default class ShowDetails extends Component {
     <div>
       <h1>show details</h1>
       {this.state.allSuits.map((result, index) =>
-       <PilotCard
+       <SuitCard
         model={result.model}
         mediaUrl={result.media_url}
        />

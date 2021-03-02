@@ -38,8 +38,13 @@
 }
 
 .seriesbox {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; */
+  margin-bottom: 10px;
   border: 1px solid black;
+}
+
+.iconImage {
+  width: 200px;
+  height: 300px;
+  align-self: center;
+  justify-content: center;
 }
