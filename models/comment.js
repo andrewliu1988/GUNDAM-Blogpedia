@@ -2,11 +2,11 @@ const { Schema } = require('mongoose')
 
 const Comment = new Schema(
   {
-    Name: {
+    name: {
       type: String,
       required: true
     },
-    Comment: {
+    comment: {
       type: String,
       required: true
     },

@@ -10,7 +10,7 @@ export default class SuitDetails extends Component {
       suitDetails: {},
       submitted: false,
       name: '',
-      description: '',
+      comment: '',
       mediaUrl: '',
       allComment: []
     }
@@ -33,11 +33,11 @@ export default class SuitDetails extends Component {
   publishNewComment = async () => {
     const newComment = {
       name: this.state.name,
-      description: this.state.description,
-      mediaUrl: this.state.description
+      comment: this.state.comment,
+      mediaUrl: this.state.mediaUrl
     }
     try {
-      const res = await axios.post(`${BASE_URL}/`, newComment)
+      const res = await axios.post(`${BASE_URL}/comment`, newComment)
       console.log(res.data)
       // const res2 = await axios.get(`${BASE_URL}/get/`)
       // this.setState({
@@ -50,9 +50,9 @@ export default class SuitDetails extends Component {
   }
 
   handleChange = ({ target }) => {
-    this.setState({
-      [target.name]: target.value
-    })
+    this.setState(() => ({[target.name]: target.value})
+      
+    )
 
     console.log('PUBLISHING', this.state)
     this.updateSubmitted()
@@ -63,7 +63,7 @@ export default class SuitDetails extends Component {
     this.setState({
       submitted: true,
       author: '',
-      description: '',
+      comment: '',
       mediaUrl: ''
     })
     this.publishNewComment()
@@ -88,10 +88,13 @@ export default class SuitDetails extends Component {
             <p className="weapons">{suitInfo.weapons}</p>
             <p className="description">{suitInfo.description}</p>
           </section>
+
+
           <form onSubmit={this.handleSubmit}>
 
 
             <input
+            name="name"
             type="text"
             placeholder="Name"
             value={this.state.name}
@@ -104,15 +107,17 @@ export default class SuitDetails extends Component {
 
 
             <textarea 
+            name="comment"
             type="text"
             placeholder="Write a comment!"
-            value={this.state.description}
+            value={this.state.comment}
             onChange={this.handleChange}
             maxLength="144"
             className="form-text"
             />
 
-            <input 
+            <input
+            name="mediaUrl" 
             type="url"
             placeholder="Share a favorite "
             value={this.state.mediaUrl}
@@ -120,7 +125,7 @@ export default class SuitDetails extends Component {
             className="url-text"
             />
 
-            <button></button>
+            <button>sumbit</button>
           </form>
       </div>
     )
