@@ -35,12 +35,6 @@ export default class SuitDetails extends Component {
     try {
       const res = await axios.post(`${BASE_URL}/comment`,newComment )
       console.log(res.data)
-      const res2 = await axios.get(`${BASE_URL}/comment/get/`)
-      // this.setState({
-      //   allComment: res2.data.comment
-      // })
-      // return res2.data
-      console.log(res2)
     } catch (error) {
       throw error
     }

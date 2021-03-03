@@ -5,4 +5,6 @@ Router.post('/', CommentController.createComment)
 
 Router.get('/get', CommentController.getComment)
 
+Router.delete('/delete', CommentController.deleteComment)
+
 module.exports = Router

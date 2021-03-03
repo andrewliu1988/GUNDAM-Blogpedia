@@ -72,49 +72,48 @@ export default class SuitDetails extends Component {
 
 
             <input
-            name="model"
-            type="text"
-            placeholder="Model #"
-            value={this.state.model}
-            onChange={this.handleChange}
-            maxLength="144"
-            className='model-text'
+              name="model"
+              type="text"
+              placeholder="Model #"
+              value={this.state.model}
+              onChange={this.handleChange}
+              maxLength="144"
+              className='model-text'
             />
 
 
 
 
             <textarea 
-            name="weapons"
-            type="text"
-            placeholder="Add Weapons"
-            value={this.state.weapons}
-            onChange={this.handleChange}
-            maxLength="144"
-            className="weapon-text"
+              name="weapons"
+              type="text"
+              placeholder="Add Weapons"
+              value={this.state.weapons}
+              onChange={this.handleChange}
+              maxLength="500"
+              className="weapon-text"
             />
 
 
             <textarea 
-            name="description"
-            type="text"
-            placeholder="Mecha Description"
-            value={this.state.description}
-            onChange={this.handleChange}
-            maxLength="500"
-            className="description-text"
+              name="description"
+              type="text"
+              placeholder="Mecha Description"
+              value={this.state.description}
+              onChange={this.handleChange}
+              className="description-text"
             />
 
 
 
 
             <input
-            name="image" 
-            type="url"
-            placeholder="Share a favorite image "
-            value={this.state.image}
-            onChange={this.handleChange}
-            className="url-text"
+              name="image" 
+              type="url"
+              placeholder="Share a favorite image "
+              value={this.state.image}
+              onChange={this.handleChange}
+              className="url-text"
             />
 
 

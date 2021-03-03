@@ -21,7 +21,21 @@ const getComment = async (req, res) => {
   }
 }
 
+const deleteComment = async (req, res) => {
+  try {
+    const { id } = req.params
+    const comment = await Comment.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Suit deleted')
+    }
+    throw new Error('Suit not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createComment,
-  getComment
+  getComment,
+  deleteComment
 }
