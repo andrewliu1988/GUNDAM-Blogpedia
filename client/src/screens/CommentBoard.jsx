@@ -7,7 +7,8 @@ export default class CommentBoard extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      allComment: []
+      allComment: [],
+      commentId: ''
     }
   }
 
@@ -25,18 +26,20 @@ export default class CommentBoard extends Component {
     }
   }
 
-  deletComment = async (event) => {
-    const commentId = event.target.attribute.commentId.value
-    console.log(commentId)
-    try{
-    
-      const res = await axios.delete(`${BASE_URL}/comment/delete/${commentId}`)
-      console.log(res)
+  // deleteComment = async (commentId) => {
+   
+  //   // const commentId = event.target.attributes.comment._id.value
+  //  console.log('firing') 
+  //  try{
+  //   console.log(commentId)
+  //     const res = await axios.delete(`${BASE_URL}/comment/delete/603f0849cd671f4762906e11`)
+      
+  //     console.log(res.data)
 
-    }catch (error) {
-      throw error
-    }
-  }
+  //   }catch (error) {
+  //     throw error
+  //   }
+  // }
 
 
   render() {
@@ -49,8 +52,8 @@ export default class CommentBoard extends Component {
           name={result.name}
           comment={result.comment}
           image={result.media_url}
-          commentid={result._id}
-          onClick={this.deleteComment}
+          commentId={result._id}
+          // onClick={()=> this.deleteComment()}
           />
         ))}
       </div>

@@ -24,6 +24,7 @@ const getComment = async (req, res) => {
 const deleteComment = async (req, res) => {
   try {
     const { id } = req.params
+    console.log(id)
     const deleted = await Comment.findByIdAndDelete(id)
     if (deleted) {
       return res.status(200).send('Comment deleted')
