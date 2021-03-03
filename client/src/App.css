@@ -26,16 +26,32 @@
   width: 400px;
 }
 
+.pilotCard {
+  border: 1px solid black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  justify-content: center;
+  width: 300px;
+}
+.suitCard {
+  border: 1px solid black;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  justify-content: center;
+  width: 350px;
+}
+
 .iconImage {
   width: 200px;
-  height: 300px;
+  height: 200px;
 }
 .suitIcon {
-  display: flex;
   width: 200px;
-  height: 300px;
-  align-self: center;
-  justify-content: center;
+  height: 200px;
 }
 
 .showDetails {
@@ -83,4 +99,16 @@
 .description {
   align-self: end;
   margin-bottom: 20px;
+}
+
+.nav {
+  background-color: #e6edf6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+
+  top: 0;
+  width: 100vw;
+  height: 50px;
 }

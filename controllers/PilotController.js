@@ -20,7 +20,21 @@ const getPilotByShowId = async (req, res) => {
   }
 }
 
+const deletePilot = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await Pilot.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('Pilot deleted')
+    }
+    throw new Error('Pilot not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getPilots,
-  getPilotByShowId
+  getPilotByShowId,
+  deletePilot
 }

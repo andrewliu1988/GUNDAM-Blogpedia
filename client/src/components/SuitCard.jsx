@@ -4,9 +4,9 @@ export default class SuitCard extends Component {
   render() {
     const {model, mediaUrl, onClick} = this.props 
     return (
-      <div className="seriesbox" onClick={onClick}>
+      <div className="suitCard" onClick={onClick}>
         <img src={mediaUrl} alt="gif" className="suitIcon"></img>
-        <h1>{model}</h1>
+        <h3>{model}</h3>
 
       </div>
     )

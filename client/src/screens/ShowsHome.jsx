@@ -18,7 +18,6 @@ export default class ShowsHome extends Component {
   getAllShows = async() => {
     try {
     const res = await axios.get(`${BASE_URL}/show`)
-    console.log(res)
     this.setState({ allShows: res.data.shows})
   } catch (error) {
     throw error
@@ -26,7 +25,6 @@ export default class ShowsHome extends Component {
 }
 
 render() {
-  console.log(this.state)
   return(
     <div >
       <h1>Series</h1>

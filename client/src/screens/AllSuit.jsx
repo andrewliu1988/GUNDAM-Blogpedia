@@ -26,10 +26,10 @@ export default class ShowsHome extends Component {
 }
 
 render() {
-  console.log(this.state)
+  console.log(this.state.allSuits)
   return(
     <div >
-      <h1>Series</h1>
+      <h1>Mobile Suits</h1>
       <div className="seriesbox">
       {this.state.allSuits.map((result, index) =>
        <SuitCard

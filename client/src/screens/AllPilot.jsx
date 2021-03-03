@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import SuitCard from '../components/PilotCard'
 import { BASE_URL } from '../globals'
 import PilotCard from '../components/PilotCard'
 
@@ -30,7 +29,7 @@ render() {
   console.log(this.state.allPilots)
   return(
     <div >
-      <h1>Series</h1>
+      <h1>Pilots</h1>
       <div className="seriesbox">
       {this.state.allPilots.map((result, index) =>
        <PilotCard

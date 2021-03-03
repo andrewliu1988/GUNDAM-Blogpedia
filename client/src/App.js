@@ -7,6 +7,7 @@ import SuitDetails from './screens/SuitDetails'
 import Nav from './components/Nav'
 import AllSuits from './screens/AllSuit'
 import AllPilots from './screens/AllPilot'
+import PilotDetails from './screens/PilotDetails'
 
 export default class App extends Component {
   render() {
@@ -22,7 +23,11 @@ export default class App extends Component {
               component={(props) => <SuitDetails {...props} />}
             />
             <Route path="/suit" component={AllSuits} />
-            <Route path="/Pilot" component={AllPilots} />
+            <Route path="/pilot" component={AllPilots} />
+            <Route
+              path="/pilot/find/:id"
+              component={(props) => <PilotDetails {...props} />}
+            />
           </Switch>
         </main>
       </div>
