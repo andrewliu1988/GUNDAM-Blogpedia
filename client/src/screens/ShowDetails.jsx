@@ -10,7 +10,8 @@ export default class ShowDetails extends Component {
     super(props) 
       this.state = {
         allSuits: [],
-        allPilots: []
+        allPilots: [],
+        seriesId: ''
       } 
     }
 
@@ -23,6 +24,7 @@ export default class ShowDetails extends Component {
       try{
         const res = await axios.get(`${BASE_URL}/suit/find/${showId}`)
         this.setState({ allSuits: res.data.suit})
+        this.setState ({ seriesId: showId})
       } catch (error) {
         throw error
       }
@@ -42,6 +44,8 @@ export default class ShowDetails extends Component {
        />
       )}
       </div>
+
+      <button onClick={() =>this.props.history.push(`/add/${this.state.seriesId}`)}>Add Gundam to Series</button>
     </div>
   )
 }

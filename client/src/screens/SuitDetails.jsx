@@ -91,7 +91,7 @@ export default class SuitDetails extends Component {
           </section>
 
 
-          <form onSubmit={this.handleSubmit}>
+          <form className="form" onSubmit={this.handleSubmit}>
 
 
             <input

@@ -8,6 +8,7 @@ import Nav from './components/Nav'
 import AllSuits from './screens/AllSuit'
 import AllPilots from './screens/AllPilot'
 import PilotDetails from './screens/PilotDetails'
+import CreateSuit from './screens/CreateSuit'
 
 export default class App extends Component {
   render() {
@@ -21,6 +22,10 @@ export default class App extends Component {
             <Route
               path="/suit/:id"
               component={(props) => <SuitDetails {...props} />}
+            />
+            <Route
+              path="/add/:id"
+              component={(props) => <CreateSuit {...props} />}
             />
             <Route path="/suit" component={AllSuits} />
             <Route path="/pilot" component={AllPilots} />
