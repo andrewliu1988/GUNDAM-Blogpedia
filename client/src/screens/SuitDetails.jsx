@@ -80,7 +80,9 @@ export default class SuitDetails extends Component {
           <section className="suitGrid">
             <img src={suitInfo.media_url} alt="media" className="suitMedia"/>
             <h1 className="model">{suitInfo.model}</h1>
+            <br/>
             <p className="weapons">{suitInfo.weapons}</p>
+            <br/>
             <p className="description">{suitInfo.description}</p>
           </section>
 

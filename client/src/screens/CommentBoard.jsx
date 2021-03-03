@@ -25,6 +25,19 @@ export default class CommentBoard extends Component {
     }
   }
 
+  deletComment = async (event) => {
+    const commentId = event.target.attribute.commentId.value
+    console.log(commentId)
+    try{
+    
+      const res = await axios.delete(`${BASE_URL}/comment/delete/${commentId}`)
+      console.log(res)
+
+    }catch (error) {
+      throw error
+    }
+  }
+
 
   render() {
     return (
@@ -32,9 +45,12 @@ export default class CommentBoard extends Component {
         <h1>Comments</h1>
         {this.state.allComment.map ((result, index) => (
           <CommentCard 
+          key={result._id}
           name={result.name}
           comment={result.comment}
           image={result.media_url}
+          commentid={result._id}
+          onClick={this.deleteComment}
           />
         ))}
       </div>
