@@ -25,48 +25,49 @@ export default class SuitDetails extends Component {
     try{
       const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
       this.setState({suitDetails: res.data.suit})
+      console.log(res)
     } catch (error){
       throw error
     }
   }
 
-  publishNewComment = async () => {
-    const newComment = {
-      name: this.state.name,
-      comment: this.state.comment,
-      mediaUrl: this.state.mediaUrl
-    }
+  publishNewComment = async (newComment) => {   
     try {
-      const res = await axios.post(`${BASE_URL}/comment`, newComment)
+      const res = await axios.post(`${BASE_URL}/comment`,newComment )
       console.log(res.data)
-      // const res2 = await axios.get(`${BASE_URL}/get/`)
+      const res2 = await axios.get(`${BASE_URL}/comment/get/`)
       // this.setState({
       //   allComment: res2.data.comment
       // })
       // return res2.data
+      console.log(res2)
     } catch (error) {
       throw error
     }
   }
 
   handleChange = ({ target }) => {
-    this.setState(() => ({[target.name]: target.value})
-      
+    this.setState(() => ({[target.name]: target.value}) 
     )
-
-    console.log('PUBLISHING', this.state)
     this.updateSubmitted()
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault() 
+    const newComment = {    
+      name: this.state.name,
+      comment: this.state.comment,
+      media_url: this.state.mediaUrl
+    }
+    console.log(newComment)
+    this.publishNewComment(newComment)
     this.setState({
       submitted: true,
       author: '',
       comment: '',
       mediaUrl: ''
     })
-    this.publishNewComment()
+   
   }
 
   updateSubmitted = () => {
