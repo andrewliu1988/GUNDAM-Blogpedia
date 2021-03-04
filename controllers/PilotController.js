@@ -44,9 +44,32 @@ const getPilotById = async (req, res) => {
   }
 }
 
+const updatePilot = async (req, res) => {
+  try {
+    const { id } = req.params
+    await Pilot.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true, upsert: true },
+      (err, pilot) => {
+        if (err) {
+          res.status(500).send(err)
+        }
+        if (!pilot) {
+          res.status(500).send('Pilot not found')
+        }
+        return res.status(200).json(pilot)
+      }
+    )
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getPilots,
   getPilotByShowId,
   deletePilot,
-  getPilotById
+  getPilotById,
+  updatePilot
 }

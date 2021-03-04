@@ -9,4 +9,6 @@ Router.get('/find/:show_id', PilotController.getPilotByShowId)
 
 Router.delete('/delete/:id', PilotController.deletePilot)
 
+Router.put('/update/:id', PilotController.updatePilot)
+
 module.exports = Router
