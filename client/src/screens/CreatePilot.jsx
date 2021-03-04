@@ -70,14 +70,14 @@ export default class PilotDetails extends Component {
     
     return (
       <div s>
-        <h1>Suit Details</h1>
+        <h1>Pilot Details</h1>
           <form className="form" onSubmit={this.handleSubmit}>
 
 
             <input
               name="name"
               type="text"
-              placeholder="Model #"
+              placeholder="Name"
               value={this.state.name}
               onChange={this.handleChange}
               maxLength="144"

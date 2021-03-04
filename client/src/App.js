@@ -10,6 +10,7 @@ import AllPilots from './screens/AllPilot'
 import PilotDetails from './screens/PilotDetails'
 import CreateSuit from './screens/CreateSuit'
 import CommentBoard from './screens/CommentBoard'
+import CreatePilot from './screens/CreatePilot'
 
 export default class App extends Component {
   render() {
@@ -25,8 +26,12 @@ export default class App extends Component {
               component={(props) => <SuitDetails {...props} />}
             />
             <Route
-              path="/add/:id"
+              path="/add/suit/:id"
               component={(props) => <CreateSuit {...props} />}
+            />
+            <Route
+              path="/add/pilot/:id"
+              component={(props) => <CreatePilot {...props} />}
             />
             <Route path="/comment" component={CommentBoard} />
             <Route path="/suit" component={AllSuits} />
