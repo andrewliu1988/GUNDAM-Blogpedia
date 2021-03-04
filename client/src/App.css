@@ -4,7 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: blueviolet;
+  /* background: linear-gradient(to top right, #0e2a4e 22%, #000000 100%); */
   text-align: center;
 }
 
@@ -14,16 +14,24 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
   justify-content: space-evenly;
+  height: auto;
 }
 
 .showCard {
   border: 1px solid black;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding: 10px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
   text-align: center;
   justify-content: center;
   width: 400px;
+
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 .pilotCard {

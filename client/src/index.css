@@ -10,7 +10,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  background-color: blueviolet;
+  background: linear-gradient(to top right, #0e2a4e 22%, #000000 100%);
+  height: auto;
+  font-family: 'DotGothic16', sans-serif;
 }
 
 code {

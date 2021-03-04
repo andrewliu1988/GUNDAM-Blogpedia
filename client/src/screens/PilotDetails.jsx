@@ -7,7 +7,12 @@ export default class PilotDetails extends Component {
   constructor(props) {
     super(props)
     this.state = { 
-      pilotDetails: {}
+      pilotDetails: {},
+      submitted: false,
+      name: '',
+      comment: '',
+      mediaUrl: '',
+      allComment: []
     }
   }
 
@@ -28,6 +33,47 @@ export default class PilotDetails extends Component {
   }
 
 
+
+  publishNewComment = async (newComment) => {   
+    try {
+      const res = await axios.post(`${BASE_URL}/comment`,newComment )
+      console.log(res.data)
+    } catch (error) {
+      throw error
+    }
+  }
+
+  handleChange = ({ target }) => {
+    this.setState(() => ({[target.name]: target.value}) 
+    )
+    this.updateSubmitted()
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault() 
+    const newComment = {    
+      name: this.state.name,
+      comment: this.state.comment,
+      media_url: this.state.mediaUrl
+    }
+    console.log(newComment)
+    this.publishNewComment(newComment)
+    this.setState({
+      submitted: true,
+      author: '',
+      comment: '',
+      mediaUrl: ''
+    })
+   
+  }
+
+  updateSubmitted = () => {
+    this.setState({
+      submitted: false
+    })
+  }
+
+
   render() {
     const pilotInfo = this.state.pilotDetails
     return (
@@ -39,6 +85,43 @@ export default class PilotDetails extends Component {
         <p className="age">Age: {pilotInfo.age}</p>
         <p className="description">{pilotInfo.description}</p>
         </section>
+
+
+        <form className="form" onSubmit={this.handleSubmit}>
+
+            <input
+            name="name"
+            type="text"
+            placeholder="Name"
+            value={this.state.name}
+            onChange={this.handleChange}
+            maxLength="144"
+            className='name-text'
+            />
+
+            <textarea 
+            name="comment"
+            type="text"
+            placeholder="Write a comment!"
+            value={this.state.comment}
+            onChange={this.handleChange}
+            maxLength="144"
+            className="form-text"
+            />
+
+            <input
+            name="mediaUrl" 
+            type="url"
+            placeholder="Share a favorite "
+            value={this.state.mediaUrl}
+            onChange={this.handleChange}
+            className="url-text"
+            />
+
+            <button>sumbit</button>
+          </form>
+
+
       </div>
     )
   }
