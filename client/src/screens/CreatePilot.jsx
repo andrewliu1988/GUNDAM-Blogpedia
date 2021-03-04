@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import { NavLink } from 'react-router-dom'
 
 
 export default class PilotDetails extends Component {
@@ -70,7 +71,7 @@ export default class PilotDetails extends Component {
     
     return (
       <div >
-        <h1>Pilot Details</h1>
+        <h1>Create Pilot</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
 
@@ -123,7 +124,7 @@ export default class PilotDetails extends Component {
             <input
               name="image" 
               type="url"
-              placeholder="Share a favorite image, gif or short video "
+              placeholder="Share A Favorite IMG or GIF "
               value={this.state.image}
               onChange={this.handleChange}
               className="create-url"
@@ -133,7 +134,17 @@ export default class PilotDetails extends Component {
 
 
             <button className="create-btn"> Submit </button>
+
+              {this.state.submitted && (
+                <button className="custom-btn view-post">
+                  <NavLink className="view-btn" to="/">
+                    View All Series
+                  </NavLink>
+                </button>)}
           </form>
+
+
+          
       </div>
     )
   }

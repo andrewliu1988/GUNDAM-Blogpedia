@@ -54,8 +54,8 @@ export default class ShowDetails extends Component {
   return (
     <div>
       <h1>show details</h1> 
-      <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} >Add Gundam to Series</button>
-      <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} >Add Pilot to Series</button>
+      <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn">Add Gundam to Series</button>
+      <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn">Add Pilot to Series</button>
       <div className="showDetails">
       {this.state.allSuits.map((result, index) =>
         <SuitCard
