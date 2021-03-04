@@ -27,7 +27,7 @@ export default class CommentBoard extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Comments</h1>
+        <h1 className="header">Comments</h1>
         {this.state.allComment.map ((result, index) => (
           <CommentCard 
             key={result._id}

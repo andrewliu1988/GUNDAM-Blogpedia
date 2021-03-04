@@ -5,6 +5,7 @@
   justify-content: space-around;
   text-align: center;
   height: 100vh;
+  font-weight: bolder;
 }
 .container {
   height: 100vh;
@@ -15,12 +16,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .showCard {
-  margin-right: 20px;
+  margin-right: 50px;
   margin-bottom: 20px;
   padding: 20px 10px 10px 10px;
   text-align: center;
@@ -65,10 +70,7 @@
 .suitIcon {
   width: 200px;
   height: 200px;
-}
-
-.showDetails {
-  display: grid;
+  opacity: 100;
 }
 
 .showDetails,
@@ -77,8 +79,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  justify-content: space-evenly;
-  /* margin: 10vh; */
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .add-btn {
@@ -87,29 +89,30 @@
   border-radius: 10px;
 }
 .suitMedia {
-  width: 400px;
-  height: 400px;
+  width: 375px;
+  height: 375px;
   justify-self: center;
   align-self: center;
-  margin-right: 100px;
+  margin-right: 75px;
+  border-radius: 10px;
+
+  background: rgba(242, 242, 247, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .suitGrid {
   display: flex;
-
-  /* background: rgba(242, 242, 247, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .suitDetails {
   background: rgba(242, 242, 247, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -120,38 +123,59 @@
 .name,
 .age,
 .mecha {
-  width: 1000px;
   text-align: left;
   font-weight: bolder;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: rgba(242, 242, 247, 0.4);
+  backdrop-filter: blur(10px);
+}
 
-  /* background: rgba(242, 242, 247, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18); */
+.model,
+.weapons,
+.name,
+.age,
+.mecha {
+  width: auto;
 }
 
 .description {
+  width: 1000px;
   -webkit-overflow-scrolling: auto;
   overflow-y: scroll;
   line-height: 145%;
   size: 15px;
   text-align: left;
-  height: 500px;
+  height: 350px;
 }
 
 .nav {
-  background-color: #e6edf6;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
-
   top: 0;
   width: 100vw;
   height: 50px;
+
+  background: rgba(242, 242, 247, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.series-nav,
+.pilot-nav,
+.suit-nav,
+.comment-nav {
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .form {
@@ -159,7 +183,7 @@
   grid-template-rows: 75px 15px 75px;
   margin: 150px auto 10px auto;
   max-width: 700px;
-  color: red;
+  color: black;
   font-size: 1.3rem;
 }
 
@@ -173,14 +197,14 @@
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: red;
+  color: black;
 }
 
 .form-author {
   height: 50px;
   font-size: 1rem;
   padding-left: 15px;
-  color: white;
+  color: black;
   margin-bottom: 200px;
   align-self: center;
 }
@@ -191,7 +215,7 @@
   font-size: 1.3rem;
   padding-top: 15px;
   padding-left: 15px;
-  color: white;
+  color: black;
   align-self: center;
 }
 
@@ -209,7 +233,7 @@
   margin-right: auto;
   min-width: 700px;
   background-color: rgba(68, 70, 179, 0.3);
-  color: white;
+  color: black;
   font-size: 1.3rem;
   font-weight: bolder;
   align-self: start;
@@ -248,4 +272,25 @@
 
 .create-text {
   height: 100px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.header {
+  width: 100vw;
+  top: 0;
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }

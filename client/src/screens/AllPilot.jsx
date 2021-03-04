@@ -29,7 +29,7 @@ render() {
   console.log(this.state.allPilots)
   return(
     <div className="container">
-      <h1>Pilots</h1>
+      <h1 className="header">Pilots</h1>
       <div className="seriesbox">
       {this.state.allPilots.map((result, index) =>
        <PilotCard

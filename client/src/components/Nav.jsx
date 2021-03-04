@@ -6,10 +6,10 @@ export default class Nav extends Component {
     return (
       <header>
         <nav className="nav">
-          <NavLink to="/">Series</NavLink>
-          <NavLink to="/pilot">All Pilots</NavLink>
-          <NavLink to="/suit">All Suits</NavLink>
-          <NavLink to='/comment'>All Comment</NavLink>
+          <NavLink to="/" className="series-nav">Series</NavLink>
+          <NavLink to="/pilot" className="pilot-nav">All Pilots</NavLink>
+          <NavLink to="/suit" className="suit-nav">All Suits</NavLink>
+          <NavLink to='/comment' className="comment-nav">All Comment</NavLink>
         </nav>
       </header>
     )

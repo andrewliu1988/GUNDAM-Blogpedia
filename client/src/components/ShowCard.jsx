@@ -7,8 +7,8 @@ export default class ShowCard extends Component {
       <div className="showCard" onClick={onClick}>
         <img src={image} alt="poster" className="iconImage"></img>
         <h3>{title}</h3>
-        <p>Episode: {eps}</p>
-        <p>Release Date: <br/> {release_date}</p>
+        <h4>Episode: {eps}</h4>
+        <h4>Release Date: <br/> {release_date}</h4>
 
       </div>
     )

@@ -78,7 +78,7 @@ export default class PilotDetails extends Component {
     const pilotInfo = this.state.pilotDetails
     return (
       <div >
-        <h1>Pilot Details</h1>
+        <h1 className="header">Pilot Details</h1>
           <section className="suitGrid">
             
             <img src={pilotInfo.media_url} alt="media" className="suitMedia"/>

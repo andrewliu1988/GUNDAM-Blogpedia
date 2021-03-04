@@ -77,7 +77,7 @@ export default class SuitDetails extends Component {
     const suitInfo = this.state.suitDetails
     return (
       <div className="container" >
-        <h1>Suit Details</h1>
+        <h1 className="header">Suit Details</h1>
           <section className="suitGrid">
             <img src={suitInfo.media_url} alt="media" className="suitMedia"/>
             <section className="suitDetails">
