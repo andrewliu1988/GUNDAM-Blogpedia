@@ -11,9 +11,7 @@ export default class CommentCard extends Component {
       }
   }
   
-
   deleteComment = async () => {
-   console.log('firing') 
    try{
       const res = await axios.delete(`${BASE_URL}/comment/delete/${this.props.commentId}`)   
       console.log(res.data)
@@ -23,12 +21,8 @@ export default class CommentCard extends Component {
     }
   }
 
-
-
   render() {
     const {name, comment, image} = this.props
-    console.log(this.props)
-
     return (
       <div>
         {!this.state.deleted ?

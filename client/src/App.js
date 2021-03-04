@@ -32,7 +32,7 @@ export default class App extends Component {
             <Route path="/suit" component={AllSuits} />
             <Route path="/pilot" component={AllPilots} />
             <Route
-              path="/pilot/find/:id"
+              path="/find/:id"
               component={(props) => <PilotDetails {...props} />}
             />
           </Switch>

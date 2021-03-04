@@ -24,21 +24,6 @@ export default class CommentBoard extends Component {
     }
   }
 
-  // deleteComment = async () => {
-  //   const commentId = this.state.allComment._id
-  //  console.log(commentId) 
-  //  try{
-  //   console.log(commentId)
-  //     const res = await axios.delete(`${BASE_URL}/comment/delete/${commentId}`)
-      
-  //     console.log(res.data)
-
-  //   }catch (error) {
-  //     throw error
-  //   }
-  // }
-
-
   render() {
     return (
       <div>
@@ -50,8 +35,6 @@ export default class CommentBoard extends Component {
             comment={result.comment}
             image={result.media_url}
             commentId={result._id}
-            // onClick={()=> this.deleteComment()}
-            allComment={this.state.allComment}
           />
         ))}
       </div>

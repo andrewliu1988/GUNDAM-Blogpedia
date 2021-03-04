@@ -25,7 +25,6 @@ export default class SuitDetails extends Component {
     try{
       const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
       this.setState({suitDetails: res.data.suit})
-      console.log(res)
     } catch (error){
       throw error
     }
@@ -89,7 +88,6 @@ export default class SuitDetails extends Component {
 
           <form className="form" onSubmit={this.handleSubmit}>
 
-
             <input
             name="name"
             type="text"
@@ -99,9 +97,6 @@ export default class SuitDetails extends Component {
             maxLength="144"
             className='name-text'
             />
-
-
-
 
             <textarea 
             name="comment"
