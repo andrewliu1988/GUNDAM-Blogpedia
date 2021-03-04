@@ -70,11 +70,34 @@ const deleteSuit = async (req, res) => {
   }
 }
 
+const updateSuit = async (req, res) => {
+  try {
+    const { id } = req.params
+    await Suit.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true, upsert: true },
+      (err, suit) => {
+        if (err) {
+          res.status(500).send(err)
+        }
+        if (!suit) {
+          res.status(500).send('Suit not found')
+        }
+        return res.status(200).json(suit)
+      }
+    )
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createSuit,
   getSuits,
   getSuitById,
   createPilot,
   getSuitByShowId,
-  deleteSuit
+  deleteSuit,
+  updateSuit
 }

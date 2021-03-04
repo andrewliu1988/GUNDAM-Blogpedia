@@ -83,7 +83,7 @@ export default class SuitDetails extends Component {
             <section className="suitDetails">
               <h1 className="model">Model: {suitInfo.model}</h1>
               <br/>
-              <p className="weapons">Weapons: <br/>{suitInfo.weapons}</p>
+              <p className="weapons">Weapons: {suitInfo.weapons}</p>
               <br/>
               <p className="description">{suitInfo.description}</p>
             </section>

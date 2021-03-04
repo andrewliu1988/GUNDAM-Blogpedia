@@ -15,4 +15,6 @@ Router.get('/find/:show_id', SuitController.getSuitByShowId)
 
 Router.delete('/delete/:id', SuitController.deleteSuit)
 
+Router.put('/update/:id', SuitController.updateSuit)
+
 module.exports = Router

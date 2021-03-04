@@ -91,11 +91,21 @@
   height: 400px;
   justify-self: center;
   align-self: center;
+  margin-right: 100px;
 }
 
 .suitGrid {
   display: flex;
 
+  /* background: rgba(242, 242, 247, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); */
+}
+
+.suitDetails {
   background: rgba(242, 242, 247, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3.5px);
@@ -106,10 +116,21 @@
 
 .model,
 .weapons,
-.description {
+.description,
+.name,
+.age,
+.mecha {
   width: 1000px;
-  margin-left: 100px;
   text-align: left;
+  font-weight: bolder;
+  font-size: 1.4rem;
+
+  /* background: rgba(242, 242, 247, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .description {
