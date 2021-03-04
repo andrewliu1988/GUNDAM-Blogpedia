@@ -7,7 +7,7 @@ export default class PilotDetails extends Component {
   constructor(props) {
     super(props)
     this.state = { 
-      PilotDetails: {}
+      pilotDetails: {}
     }
   }
 
@@ -19,9 +19,9 @@ export default class PilotDetails extends Component {
     const pilotId = this.props.match.params.id
     console.log(pilotId)
     try{
-      const res = await axios.get(`${BASE_URL}/pilot/find/${pilotId}`)
+      const res = await axios.get(`${BASE_URL}/pilot/get/${pilotId}`)
       console.log(res, "andrew")
-      this.setState({suitDetails: res.data.pilots})
+      this.setState({pilotDetails: res.data.pilot})
     } catch (error){
       throw error
     }
@@ -29,7 +29,7 @@ export default class PilotDetails extends Component {
 
 
   render() {
-    const pilotInfo = this.state.suitDetails
+    const pilotInfo = this.state.pilotDetails
     return (
       <div >
         <h1>Pilot Details</h1>

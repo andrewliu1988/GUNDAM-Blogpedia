@@ -33,8 +33,20 @@ const deletePilot = async (req, res) => {
   }
 }
 
+const getPilotById = async (req, res) => {
+  console.log('FIRING')
+  try {
+    console.log(req.params.id)
+    const pilot = await Pilot.findById(req.params.id)
+    return res.status(200).json({ pilot })
+  } catch (error) {
+    return res.status(500).send('Pilot not found')
+  }
+}
+
 module.exports = {
   getPilots,
   getPilotByShowId,
-  deletePilot
+  deletePilot,
+  getPilotById
 }
