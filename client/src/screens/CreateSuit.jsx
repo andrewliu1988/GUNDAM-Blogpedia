@@ -66,9 +66,9 @@ export default class SuitDetails extends Component {
   render() {
     
     return (
-      <div s>
+      <div >
         <h1>Suit Details</h1>
-          <form className="form" onSubmit={this.handleSubmit}>
+          <form className="create-form" onSubmit={this.handleSubmit}>
 
 
             <input
@@ -78,7 +78,7 @@ export default class SuitDetails extends Component {
               value={this.state.model}
               onChange={this.handleChange}
               maxLength="144"
-              className='form-author'
+              className='create-author'
             />
 
 
@@ -91,7 +91,7 @@ export default class SuitDetails extends Component {
               value={this.state.weapons}
               onChange={this.handleChange}
               maxLength="500"
-              className="form-text"
+              className="create-text"
             />
 
 
@@ -101,7 +101,7 @@ export default class SuitDetails extends Component {
               placeholder="Mecha Description"
               value={this.state.description}
               onChange={this.handleChange}
-              className="form-text"
+              className="create-text"
             />
 
 
@@ -113,13 +113,13 @@ export default class SuitDetails extends Component {
               placeholder="Share a favorite image, gif or short video "
               value={this.state.image}
               onChange={this.handleChange}
-              className="form-url"
+              className="create-url"
             />
 
 
 
 
-            <button>sumbit</button>
+            <button className="create-btn">Submit</button>
           </form>
       </div>
     )

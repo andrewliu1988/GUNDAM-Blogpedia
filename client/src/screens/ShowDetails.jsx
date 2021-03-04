@@ -44,6 +44,11 @@ export default class ShowDetails extends Component {
          throw error
        }
     }
+
+
+    // updateSuits= async () => {
+      
+    // }
   
   render(){
   return (

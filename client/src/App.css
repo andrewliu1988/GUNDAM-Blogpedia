@@ -192,3 +192,31 @@
   color: whitesmoke;
   opacity: 1;
 }
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-author,
+.create-text,
+.create-url,
+.create-btn {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: red;
+}
+
+.create-author {
+  height: 30px;
+  width: 200px;
+}
+
+.create-text {
+  height: 100px;
+}
