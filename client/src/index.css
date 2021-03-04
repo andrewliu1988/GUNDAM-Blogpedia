@@ -1,8 +1,5 @@
 body {
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -12,7 +9,14 @@ body {
   justify-content: space-around;
   background: linear-gradient(to top right, #0e2a4e 22%, #000000 100%);
   height: auto;
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'Shippori Mincho B1', serif;
+  color: #ffff33;
+  background: url(https://images.unsplash.com/photo-1543955946-8d33e764d8f2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 code {

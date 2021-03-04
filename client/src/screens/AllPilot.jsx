@@ -28,7 +28,7 @@ export default class AllPilot extends Component {
 render() {
   console.log(this.state.allPilots)
   return(
-    <div >
+    <div className="container">
       <h1>Pilots</h1>
       <div className="seriesbox">
       {this.state.allPilots.map((result, index) =>
@@ -36,7 +36,7 @@ render() {
         key={result._id}
         name={result.name}
         mediaUrl={result.media_url}
-        onClick={()=> this.props.history.push(`/pilot/${result._id}`)}
+        onClick={()=> this.props.history.push(`/find/${result._id}`)}
        />
       )}
       </div>

@@ -26,7 +26,7 @@ export default class ShowsHome extends Component {
 
 render() {
   return(
-    <div >
+    <div className="container">
       <h1>Series</h1>
       <div className="seriesbox">
       {this.state.allShows.map((result, index ) => (

@@ -8,7 +8,7 @@ export default class ShowCard extends Component {
         <img src={image} alt="poster" className="iconImage"></img>
         <h3>{title}</h3>
         <p>Episode: {eps}</p>
-        <p>Release Date: {release_date}</p>
+        <p>Release Date: <br/> {release_date}</p>
 
       </div>
     )

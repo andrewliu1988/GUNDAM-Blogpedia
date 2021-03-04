@@ -79,12 +79,16 @@ export default class PilotDetails extends Component {
     return (
       <div >
         <h1>Pilot Details</h1>
-        <section className="suitGrid">
-        <img src={pilotInfo.media_url} alt="media" className="suitMedia"/>
-        <h1 className="name">Name: {pilotInfo.name}</h1>
-        <p className="age">Age: {pilotInfo.age}</p>
-        <p className="description">{pilotInfo.description}</p>
-        </section>
+          <section className="suitGrid">
+            
+            <img src={pilotInfo.media_url} alt="media" className="suitMedia"/>
+            <section className="suitDetails">
+                <h1 className="name">Name: {pilotInfo.name}</h1>
+                <p className="age">Age: {pilotInfo.age}</p>
+                <p className="mecha">Mecha: {pilotInfo.mecha}</p>
+                <p className="description">{pilotInfo.description}</p>
+            </section>
+          </section>
 
 
         <form className="form" onSubmit={this.handleSubmit}>
@@ -96,7 +100,7 @@ export default class PilotDetails extends Component {
             value={this.state.name}
             onChange={this.handleChange}
             maxLength="144"
-            className='name-text'
+            className='form-author'
             />
 
             <textarea 
@@ -115,10 +119,10 @@ export default class PilotDetails extends Component {
             placeholder="Share a favorite "
             value={this.state.mediaUrl}
             onChange={this.handleChange}
-            className="url-text"
+            className="form-url"
             />
 
-            <button>sumbit</button>
+            <button className="custom-btn">sumbit</button>
           </form>
 
 

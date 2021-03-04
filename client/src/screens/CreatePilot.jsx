@@ -3,24 +3,25 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 
-export default class SuitDetails extends Component {
+export default class PilotDetails extends Component {
   constructor(props) {
     super(props)
     this.state = {   
       submitted: false,
-      model: '',
-      weapons: '',
+      name: '',
+      age: '',
+      mecha:'',
       image: '',
       description:''
     }
   }
 
   
-  createSuit = async (newSuit) => {
-    const suitId = this.props.match.params.id
+  createPilot = async (newPilot) => {
+    const pilotId = this.props.match.params.id
     console.log(this.props)
     try{
-      const res = await axios.post(`${BASE_URL}/show/${suitId}/suit`, newSuit)
+      const res = await axios.post(`${BASE_URL}/show/${pilotId}/pilot`, newPilot)
       console.log(res)
     } catch (error){
       throw error
@@ -37,18 +38,20 @@ export default class SuitDetails extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault() 
-    const newSuit = {    
-      model: this.state.model,
-      weapons: this.state.weapons,
+    const newPilot = {    
+      name: this.state.name,
+      age: this.state.age,
+      mecha:this.state.mecha,
       media_url: this.state.image,
       description: this.state.description
     }
-    console.log(newSuit)
-    this.createSuit(newSuit)
+    console.log(newPilot)
+    this.createPilot(newPilot)
     this.setState({
       submitted: true,
-      model: '',
-      weapons: '',
+      name: '',
+      age: '',
+      mehca: '',
       image: '',
       description: ''
     })
@@ -72,10 +75,10 @@ export default class SuitDetails extends Component {
 
 
             <input
-              name="model"
+              name="name"
               type="text"
               placeholder="Model #"
-              value={this.state.model}
+              value={this.state.name}
               onChange={this.handleChange}
               maxLength="144"
               className='form-author'
@@ -85,10 +88,20 @@ export default class SuitDetails extends Component {
 
 
             <textarea 
-              name="weapons"
+              name="age"
               type="text"
-              placeholder="Add Weapons"
-              value={this.state.weapons}
+              placeholder="Add age"
+              value={this.state.age}
+              onChange={this.handleChange}
+              maxLength="500"
+              className="form-text"
+            />
+
+            <textarea 
+              name="mecha"
+              type="text"
+              placeholder="Piloted Mobile Suits"
+              value={this.state.mecha}
               onChange={this.handleChange}
               maxLength="500"
               className="form-text"

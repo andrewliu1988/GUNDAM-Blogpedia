@@ -28,7 +28,7 @@ export default class ShowsHome extends Component {
 render() {
   console.log(this.state.allSuits)
   return(
-    <div >
+    <div className="container">
       <h1>Mobile Suits</h1>
       <div className="seriesbox">
       {this.state.allSuits.map((result, index) =>

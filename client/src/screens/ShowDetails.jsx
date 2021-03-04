@@ -48,7 +48,9 @@ export default class ShowDetails extends Component {
   render(){
   return (
     <div>
-      <h1>show details</h1>
+      <h1>show details</h1> 
+      <button onClick={() =>this.props.history.push(`/add/${this.state.seriesId}`)} >Add Gundam to Series</button>
+      <button onClick={() =>this.props.history.push(`/add/${this.state.seriesId}`)} >Add Pilot to Series</button>
       <div className="showDetails">
       {this.state.allSuits.map((result, index) =>
         <SuitCard
@@ -58,7 +60,7 @@ export default class ShowDetails extends Component {
           onClick={()=> this.props.history.push(`/suit/${result._id}`)}
         />
         )}
-        <div className="showDetails">
+        <div className="showDetails2">
           {this.state.allPilots.map((result, index)=>
           <PilotCard
             key={result._id}
@@ -69,7 +71,7 @@ export default class ShowDetails extends Component {
         </div>
       </div> 
 
-      <button onClick={() =>this.props.history.push(`/add/${this.state.seriesId}`)}>Add Gundam to Series</button>
+     
     </div>
   )
 }

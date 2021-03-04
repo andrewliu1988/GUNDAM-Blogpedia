@@ -76,15 +76,17 @@ export default class SuitDetails extends Component {
   render() {
     const suitInfo = this.state.suitDetails
     return (
-      <div >
+      <div className="container" >
         <h1>Suit Details</h1>
           <section className="suitGrid">
             <img src={suitInfo.media_url} alt="media" className="suitMedia"/>
-            <h1 className="model">{suitInfo.model}</h1>
-            <br/>
-            <p className="weapons">{suitInfo.weapons}</p>
-            <br/>
-            <p className="description">{suitInfo.description}</p>
+            <section className="suitDetails">
+              <h1 className="model">Model: {suitInfo.model}</h1>
+              <br/>
+              <p className="weapons">Weapons: <br/>{suitInfo.weapons}</p>
+              <br/>
+              <p className="description">{suitInfo.description}</p>
+            </section>
           </section>
 
 
@@ -97,7 +99,7 @@ export default class SuitDetails extends Component {
             value={this.state.name}
             onChange={this.handleChange}
             maxLength="144"
-            className='name-text'
+            className='form-author'
             />
 
             <textarea 
@@ -116,10 +118,10 @@ export default class SuitDetails extends Component {
             placeholder="Share a favorite "
             value={this.state.mediaUrl}
             onChange={this.handleChange}
-            className="url-text"
+            className="form-url"
             />
 
-            <button>sumbit</button>
+            <button className="custom-btn">sumbit</button>
           </form>
       </div>
     )
