@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+import { NavLink } from 'react-router-dom'
 
 
 export default class SuitDetails extends Component {
@@ -120,6 +121,13 @@ export default class SuitDetails extends Component {
 
 
             <button className="create-btn">Submit</button>
+
+            {this.state.submitted && (
+                <button className="create-btn">
+                  <NavLink className="view-btn" to="/">
+                    View All Series
+                  </NavLink>
+                </button>)}
           </form>
       </div>
     )

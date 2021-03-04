@@ -98,14 +98,14 @@ export default class PilotDetails extends Component {
               className="create-author"
             />
 
-            <textarea
+            <input
               name="mecha"
               type="text"
               placeholder="Piloted Mobile Suits"
               value={this.state.mecha}
               onChange={this.handleChange}
               maxLength="500"
-              className="create-text"
+              className="create-author"
             />
 
 
@@ -115,7 +115,7 @@ export default class PilotDetails extends Component {
               placeholder="Mecha Description"
               value={this.state.description}
               onChange={this.handleChange}
-              className="create-author"
+              className="create-text"
             />
 
 
