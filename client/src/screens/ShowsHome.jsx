@@ -31,6 +31,7 @@ render() {
       <div className="seriesbox">
       {this.state.allShows.map((result, index ) => (
         <ShowCard
+        key={result._id}
         onClick={()=> this.props.history.push(`/suit/find/${result._id}`)}
         title={result.title}
         image={result.image}

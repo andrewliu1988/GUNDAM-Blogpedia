@@ -3,7 +3,7 @@ const SuitController = require('../controllers/SuitController')
 
 // routes go here
 
-Router.post('/', SuitController.createSuit)
+Router.post('/create', SuitController.createSuit)
 
 Router.get('/', SuitController.getSuits)
 
