@@ -203,6 +203,13 @@
   color: black;
 }
 
+.series-nav:hover,
+.pilot-nav:hover,
+.suit-nav:hover,
+.comment-nav {
+  font-weight: 900;
+}
+
 .form {
   display: grid;
   grid-template-rows: 75px 15px 75px;
@@ -221,7 +228,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   color: black;
 }
 
@@ -257,11 +264,13 @@
   margin-left: auto;
   margin-right: auto;
   min-width: 700px;
-  background-color: rgba(68, 70, 179, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   color: black;
   font-size: 1.3rem;
   font-weight: bolder;
   align-self: start;
+  margin-bottom: 20px;
 }
 
 ::placeholder {
@@ -309,6 +318,10 @@
   height: 40px;
 }
 
+.create-btn1 {
+  width: 700px;
+}
+
 .button-area {
   display: flex;
   flex-direction: row;
@@ -324,7 +337,6 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   margin-bottom: 30px;
 }

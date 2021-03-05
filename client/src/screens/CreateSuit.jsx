@@ -22,7 +22,7 @@ export default class SuitDetails extends Component {
     try{
       const res = await axios.post(`${BASE_URL}/show/${suitId}/suit`, newSuit)
     } catch (error){
-      throw error
+      throw error()
     }
   }
 
