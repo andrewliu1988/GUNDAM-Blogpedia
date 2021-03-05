@@ -1,3 +1,5 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
+
 .App {
   display: flex;
   flex-direction: row;
@@ -18,10 +20,8 @@
   margin-bottom: 10px;
   justify-content: space-between;
   height: auto;
-  margin-left: 100px;
-  margin-right: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .showCard {
@@ -70,7 +70,7 @@
 .suitIcon {
   width: 200px;
   height: 200px;
-  opacity: 100;
+  border-radius: 10px;
 }
 
 .showDetails,
@@ -106,6 +106,7 @@
 
 .suitGrid {
   display: flex;
+  justify-content: center;
 }
 
 .suitDetails {
@@ -284,13 +285,86 @@
 }
 
 .header {
+  display: flex;
+  justify-content: center;
   width: 100vw;
-  top: 0;
+  margin: 2px auto;
+  /* top: 0; */
   margin-bottom: 50px;
+  background: rgba(242, 242, 247, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  height: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+}
+
+.commentCard {
+  display: flex;
+  margin-bottom: 10px;
+  align-content: center;
+  width: 75px;
+  border-radius: 10px;
+}
+
+.commentInfo {
+  width: 200px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: left;
+  line-height: 145%;
+  size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* .comments {
+  -webkit-overflow-scrolling: auto;
+  overflow-y: scroll;
+} */
+
+.delete-btn {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.delete-btn::after {
+  content: '\f014';
+  font-family: FontAwesome;
+  color: rgba(148, 18, 61, 0.6);
+  font-size: 20px;
+  /* transition: font-size 150ms ease-in-out; */
+}
+
+.delete-btn:hover::after {
+  font-size: 22px;
+  color: rgba(148, 18, 61, 0.6);
+}
+
+.suitIcon2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  justify-content: flex-end;
 }

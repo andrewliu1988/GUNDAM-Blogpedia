@@ -28,15 +28,17 @@ export default class CommentBoard extends Component {
     return (
       <div className="container">
         <h1 className="header">Comments</h1>
-        {this.state.allComment.map ((result, index) => (
-          <CommentCard 
-            key={result._id}
-            name={result.name}
-            comment={result.comment}
-            image={result.media_url}
-            commentId={result._id}
-          />
-        ))}
+          <div className="comment-container">
+            {this.state.allComment.map ((result, index) => (
+              <CommentCard 
+                key={result._id}
+                name={result.name}
+                comment={result.comment}
+                image={result.media_url}
+                commentId={result._id}
+              />
+            ))}
+          </div>
       </div>
     )
   }

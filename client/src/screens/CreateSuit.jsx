@@ -67,7 +67,7 @@ export default class SuitDetails extends Component {
   render() {
     
     return (
-      <div >
+      <div  className="container" >
         <h1>Create Suit</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 

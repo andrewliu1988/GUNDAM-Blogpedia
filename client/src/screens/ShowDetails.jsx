@@ -47,6 +47,15 @@ export default class ShowDetails extends Component {
 
 
     // updateSuits= async () => {
+    //   let showId = this.props.match
+    //   try{
+    //     const res = await axios.put(`${BASE_URL}/suit/update/:id`)
+    //     const req = {
+    //       model: req.body. model,
+    //     }
+    //   }catch (error) {
+    //     throw error
+    //   }
       
     // }
   
@@ -55,7 +64,7 @@ export default class ShowDetails extends Component {
     <div className="container">
       <section className="button-area">
       <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn">Add Gundam to Series</button>
-      <h1 className="header">show details</h1> 
+      <h1 >show details</h1> 
       <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn">Add Pilot to Series</button>
       </section>
       <div className="showDetails">
