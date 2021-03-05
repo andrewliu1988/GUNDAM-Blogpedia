@@ -41,7 +41,7 @@ The project was deployed using Heroku and can be view [here.]()
 ***
 
 #### Final Product
-![HOMEPAGE](images/Screen%20Shot%202021-03-05%20at%2010.57.47%20AM.png) 
+![HOMEPAGE](images/Screen%20Shot%202021-03-05%20at%202.25.13%20PM.png) 
 
 ***
 
