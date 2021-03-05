@@ -11,7 +11,6 @@ const getPilots = async (req, res) => {
 
 const getPilotByShowId = async (req, res) => {
   try {
-    console.log(req.params.show_id)
     const showId = req.params.show_id
     const pilot = await Pilot.find({ show_id: { $eq: showId } })
     return res.status(200).json({ pilot })
@@ -34,9 +33,7 @@ const deletePilot = async (req, res) => {
 }
 
 const getPilotById = async (req, res) => {
-  console.log('FIRING')
   try {
-    console.log(req.params.id)
     const pilot = await Pilot.findById(req.params.id)
     return res.status(200).json({ pilot })
   } catch (error) {

@@ -22,7 +22,6 @@ export default class SuitDetails extends Component {
   
   getSuitDetails = async () => {
     const suitId = this.props.match.params.id
-    console.log(suitId)
     try{
       const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
       this.setState({suitDetails: res.data.suit})
