@@ -71,14 +71,14 @@ export default class PilotDetails extends Component {
     
     return (
       <div className="container">
-        <h1>Create Pilot</h1>
+        <h1 className="header">Create Pilot</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
 
             <input
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder="NAME"
               value={this.state.name}
               onChange={this.handleChange}
               maxLength="144"
@@ -91,7 +91,7 @@ export default class PilotDetails extends Component {
             <input 
               name="age"
               type="text"
-              placeholder="Add age"
+              placeholder="AGE"
               value={this.state.age}
               onChange={this.handleChange}
               maxLength="144"
@@ -101,7 +101,7 @@ export default class PilotDetails extends Component {
             <input
               name="mecha"
               type="text"
-              placeholder="Piloted Mobile Suits"
+              placeholder="PILOTED MOBILE SUITS"
               value={this.state.mecha}
               onChange={this.handleChange}
               maxLength="500"
@@ -112,7 +112,7 @@ export default class PilotDetails extends Component {
             <textarea 
               name="description"
               type="text"
-              placeholder="Mecha Description"
+              placeholder="PILOT DESCRIPTION"
               value={this.state.description}
               onChange={this.handleChange}
               className="create-text"
@@ -124,7 +124,7 @@ export default class PilotDetails extends Component {
             <input
               name="image" 
               type="url"
-              placeholder="Share A Favorite IMG or GIF "
+              placeholder="SHARE A FAVORITE IMAGE, OR GIF"
               value={this.state.image}
               onChange={this.handleChange}
               className="create-url"
@@ -133,12 +133,12 @@ export default class PilotDetails extends Component {
 
 
 
-            <button className="create-btn"> Submit </button>
+            <button className="create-btn"> SUBMIT </button>
 
               {this.state.submitted && (
                 <button className="custom-btn view-post">
                   <NavLink className="view-btn" to="/">
-                    View All Series
+                    VIEW ALL SERIES
                   </NavLink>
                 </button>)}
           </form>

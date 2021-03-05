@@ -77,7 +77,7 @@ export default class SuitDetails extends Component {
     const suitInfo = this.state.suitDetails
     return (
       <div className="container" >
-        <h1 className="header">Suit Details</h1>
+        <h1 className="header">SUIT DETAILS</h1>
           <section className="suitGrid">
             <img src={suitInfo.media_url} alt="media" className="suitMedia"/>
             <section className="suitDetails">
@@ -95,7 +95,7 @@ export default class SuitDetails extends Component {
             <input
             name="name"
             type="text"
-            placeholder="Name"
+            placeholder="NAME"
             value={this.state.name}
             onChange={this.handleChange}
             maxLength="144"
@@ -105,7 +105,7 @@ export default class SuitDetails extends Component {
             <textarea 
             name="comment"
             type="text"
-            placeholder="Write a comment!"
+            placeholder="WRITE A COMMENT"
             value={this.state.comment}
             onChange={this.handleChange}
             maxLength="144"
@@ -115,13 +115,13 @@ export default class SuitDetails extends Component {
             <input
             name="mediaUrl" 
             type="url"
-            placeholder="Share a favorite "
+            placeholder="SHARE A FAVORITE IMAGE, OR GIF "
             value={this.state.mediaUrl}
             onChange={this.handleChange}
             className="form-url"
             />
 
-            <button className="custom-btn">sumbit</button>
+            <button className="custom-btn">SUMBIT</button>
           </form>
       </div>
     )

@@ -68,14 +68,14 @@ export default class SuitDetails extends Component {
     
     return (
       <div  className="container" >
-        <h1>Create Suit</h1>
+        <h1 className="header">Create Suit</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
 
             <input
               name="model"
               type="text"
-              placeholder="Model #"
+              placeholder="MODEL #"
               value={this.state.model}
               onChange={this.handleChange}
               maxLength="144"
@@ -88,7 +88,7 @@ export default class SuitDetails extends Component {
             <textarea 
               name="weapons"
               type="text"
-              placeholder="Add Weapons"
+              placeholder="ADD WEAPONS"
               value={this.state.weapons}
               onChange={this.handleChange}
               maxLength="500"
@@ -99,7 +99,7 @@ export default class SuitDetails extends Component {
             <textarea 
               name="description"
               type="text"
-              placeholder="Mecha Description"
+              placeholder="MECHA DESCRIPTION"
               value={this.state.description}
               onChange={this.handleChange}
               className="create-text"
@@ -111,7 +111,7 @@ export default class SuitDetails extends Component {
             <input
               name="image" 
               type="url"
-              placeholder="Share a favorite image, gif or short video "
+              placeholder="SHARE A FAVORITE IMAGE, OR GIF"
               value={this.state.image}
               onChange={this.handleChange}
               className="create-url"
@@ -120,7 +120,7 @@ export default class SuitDetails extends Component {
 
 
 
-            <button className="create-btn">Submit</button>
+            <button className="create-btn">SUBMIT</button>
 
             {this.state.submitted && (
                 <button className="create-btn">

@@ -77,8 +77,8 @@ export default class PilotDetails extends Component {
   render() {
     const pilotInfo = this.state.pilotDetails
     return (
-      <div >
-        <h1 className="header">Pilot Details</h1>
+      <div className="container">
+        <h1 className="header">PILOT DETAILS</h1>
           <section className="suitGrid">
             
             <img src={pilotInfo.media_url} alt="media" className="suitMedia"/>
@@ -96,7 +96,7 @@ export default class PilotDetails extends Component {
             <input
             name="name"
             type="text"
-            placeholder="Name"
+            placeholder="NAME"
             value={this.state.name}
             onChange={this.handleChange}
             maxLength="144"
@@ -106,7 +106,7 @@ export default class PilotDetails extends Component {
             <textarea 
             name="comment"
             type="text"
-            placeholder="Write a comment!"
+            placeholder="WRITE A COMMENT!"
             value={this.state.comment}
             onChange={this.handleChange}
             maxLength="144"
@@ -116,13 +116,13 @@ export default class PilotDetails extends Component {
             <input
             name="mediaUrl" 
             type="url"
-            placeholder="Share a favorite "
+            placeholder="SHARE A FAVORITE IMAGE, OR GIF "
             value={this.state.mediaUrl}
             onChange={this.handleChange}
             className="form-url"
             />
 
-            <button className="custom-btn">sumbit</button>
+            <button className="custom-btn">SUMBIT</button>
           </form>
 
 

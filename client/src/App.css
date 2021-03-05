@@ -61,7 +61,7 @@
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .iconImage {
@@ -83,14 +83,22 @@
   flex-wrap: wrap;
   margin-bottom: 10px;
   justify-content: space-evenly;
-  /* margin: 0 auto; */
 }
 
-.add-btn {
-  margin: 100px 10px 100px 10px;
+.add-btn1 {
+  margin-right: 100px;
+  margin-top: 20px;
   height: 50px;
   border-radius: 10px;
 }
+
+.add-btn2 {
+  margin-top: 20px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
 .suitMedia {
   width: 375px;
   height: 375px;
@@ -245,8 +253,11 @@
 }
 
 .create-form {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 600px;
+  justify-content: center;
 }
 
 .create-author,
@@ -260,14 +271,14 @@
   -webkit-backdrop-filter: blur(20px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: blue;
+  color: black;
   font-size: 1.3rem;
   font-weight: bolder;
+  width: 600px;
 }
 
 .create-author {
   height: 30px;
-  width: 500px;
 }
 
 .create-text {
@@ -275,9 +286,9 @@
 }
 
 .button-area {
-  display: grid;
-  justify-content: center;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .header {
@@ -285,13 +296,13 @@
   justify-content: center;
   width: 100vw;
   margin: 2px auto;
-  margin-bottom: 50px;
   background: rgba(242, 242, 247, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 20px;
 }
 
 .comment-container {
