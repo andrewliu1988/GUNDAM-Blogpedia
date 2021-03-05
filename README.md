@@ -25,9 +25,9 @@ A combination of encyclopedia and blogpost.
 
 ### **Getting Started**
 
-I used Trello to keep track of my development progress, [click here](https://trello.com/b/t2PlVjDY/gundama-api) to view.
+A Trello board was used to keep track of my development progress, [click here](https://trello.com/b/t2PlVjDY/gundama-api) to view.
 
-
+The project was deployed using Heroku and can be view [here.]()
 
 
 ***
