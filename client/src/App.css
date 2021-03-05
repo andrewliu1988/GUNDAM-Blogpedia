@@ -306,10 +306,8 @@
   margin-bottom: 10px;
   justify-content: space-between;
   height: auto;
-  margin-left: 100px;
-  margin-right: 100px;
-  /* padding-left: 100px;
-  padding-right: 100px; */
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 .commentCard {
@@ -318,9 +316,13 @@
   align-content: center;
   width: 75px;
   border-radius: 10px;
+  align-content: flex-start;
+  height: 75px;
 }
 
 .commentInfo {
+  display: flex;
+  flex-direction: column;
   width: 200px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
@@ -333,12 +335,8 @@
   size: 15px;
   padding-left: 20px;
   padding-right: 20px;
+  height: 450px;
 }
-
-/* .comments {
-  -webkit-overflow-scrolling: auto;
-  overflow-y: scroll;
-} */
 
 .delete-btn {
   position: absolute;
@@ -354,7 +352,7 @@
   font-family: FontAwesome;
   color: rgba(148, 18, 61, 0.6);
   font-size: 20px;
-  /* transition: font-size 150ms ease-in-out; */
+  transition: font-size 150ms ease-in-out;
 }
 
 .delete-btn:hover::after {
@@ -366,5 +364,9 @@
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  padding-bottom: 10px;
+  align-self: flex-end;
+  align-content: flex-end;
   justify-content: flex-end;
+  bottom: 5px;
 }

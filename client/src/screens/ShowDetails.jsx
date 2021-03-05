@@ -46,18 +46,22 @@ export default class ShowDetails extends Component {
     }
 
 
-    // updateSuits= async () => {
-    //   let showId = this.props.match
-    //   try{
-    //     const res = await axios.put(`${BASE_URL}/suit/update/:id`)
-    //     const req = {
-    //       model: req.body. model,
-    //     }
-    //   }catch (error) {
-    //     throw error
-    //   }
+    updateSuits= async () => {  
+      let updateSuit = this.state.allSuits._id
+      try{
+        const res = await axios.put(`${BASE_URL}/suit/update/${updateSuit}`)
+        const req = {
+          _id: req.body.id,
+          model: req.body.model,
+          weapons: req.body.weapons,
+          media_url: req.body.media_url,
+          description: req.body.description
+        } 
+      }catch (error) {
+        throw error
+      }
       
-    // }
+    }
   
   render(){
   return (
@@ -74,6 +78,7 @@ export default class ShowDetails extends Component {
           model={result.model}
           mediaUrl={result.media_url}
           onClick={()=> this.props.history.push(`/suit/${result._id}`)}
+          suitId={result._id}
         />
         )}
         <div className="showDetails2">
@@ -83,6 +88,7 @@ export default class ShowDetails extends Component {
             mediaUrl={result.media_url}
             name={result.name}
             onClick={()=> this.props.history.push(`/find/${result._id}`)}
+            pilotId={result._id}
           />)}
         </div>
       </div> 

@@ -38,6 +38,8 @@ export default class CommentCard extends Component {
           </button>
           <img src={image} alt="gif"className="suitIcon2"></img>     
           </section>
+
+          
         </div> : null}
 
       </div>
