@@ -24,10 +24,16 @@ deleteSuit = async () => {
     const {model, mediaUrl, onClick} = this.props 
     return (
       <div>
+        {!this.state.deleted ?
           <div className="suitCard" onClick={onClick}>
-            <img src={mediaUrl} alt="gif" className="suitIcon"></img>
             <h3>{model}</h3>
-          </div>
+            <img src={mediaUrl} alt="gif" className="suitIcon"></img>
+            <button
+              onClick={this.deleteSuit}
+              className="delete-btn"> 
+              </button>       
+         
+          </div>  : null }
       </div>
     )
   }
