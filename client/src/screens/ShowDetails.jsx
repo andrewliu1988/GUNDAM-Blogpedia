@@ -47,7 +47,7 @@ export default class ShowDetails extends Component {
   render(){
   return (
     <div className="container">
-      <h1 className="header">Character/Pilot</h1> 
+      <h1 className="header">CHARACTER / PILOT</h1> 
       <section className="button-area">
           <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn1">Add Gundam to Series</button>
           <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn2">Add Pilot to Series</button>    

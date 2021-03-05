@@ -28,7 +28,7 @@ render() {
 
   return(
     <div className="container">
-      <h1 className="header">Mobile Suits</h1>
+      <h1 className="header">MOBILE SUITS</h1>
         <div className="seriesbox">
           {this.state.allSuits.map((result, index) =>
           <SuitCard

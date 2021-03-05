@@ -27,7 +27,7 @@ export default class CommentBoard extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="header">Comments</h1>
+        <h1 className="header">COMMENTS</h1>
           <div className="comment-container">
             {this.state.allComment.map ((result, index) => (
               <CommentCard 

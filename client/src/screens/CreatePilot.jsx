@@ -68,7 +68,7 @@ export default class PilotDetails extends Component {
     
     return (
       <div className="container">
-        <h1 className="header">Create Pilot</h1>
+        <h1 className="header">CREATE PILOT</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
 

@@ -27,7 +27,7 @@ export default class ShowsHome extends Component {
 render() {
   return(
     <div className="container">
-      <h1 className="header">Series</h1>
+      <h1 className="header">SERIES</h1>
       <div className="seriesbox">
       {this.state.allShows.map((result, index ) => (
         <ShowCard

@@ -27,7 +27,7 @@ export default class AllPilot extends Component {
 render() {
   return(
     <div className="container">
-      <h1 className="header">Pilots</h1>
+      <h1 className="header">PILOTS</h1>
       <div className="seriesbox">
       {this.state.allPilots.map((result, index) =>
        <PilotCard
