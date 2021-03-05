@@ -256,7 +256,7 @@
   font-size: 1rem;
   padding-left: 15px;
   align-self: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .custom-btn {
@@ -271,6 +271,7 @@
   font-weight: bolder;
   align-self: start;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 ::placeholder {
@@ -289,7 +290,8 @@
 .create-author,
 .create-text,
 .create-url,
-.create-btn {
+.create-btn,
+.create-btn1 {
   margin-bottom: 50px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
@@ -319,6 +321,7 @@
 }
 
 .create-btn1 {
+  height: 40px;
   width: 700px;
 }
 
