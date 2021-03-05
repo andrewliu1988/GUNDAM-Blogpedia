@@ -1,6 +1,6 @@
-# Gundam-API
+# GUNDAM Blogpedia
 
-## Date: 2/28/2021 
+## Date: 3/5/2021 
 
 ### By: Andrew Liu 
 #### [Github](https://github.com/andrewliu1988) | [Linkedin](https://www.linkedin.com/in/andrewliu1988/)
