@@ -18,6 +18,7 @@ A combination of encyclopedia and blogpost.
 
 ### **Technologies**
 
+![HTML, CSS, Javascript](images/Coding%20Icon.png)
 ![Mangoose/MongoDB, Express, React, Node ](images/banner.png)
 
 ***
