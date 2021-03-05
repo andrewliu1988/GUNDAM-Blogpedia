@@ -47,7 +47,10 @@ I used Trello to keep track of my development progress, [click here](https://tre
 
 ### **Feature Updates**
 
-
+- [ ] Update to individual card
+- [ ] Home page
+- [ ] Create Logo
+- [ ] User Sign in 
 
 ***
 
