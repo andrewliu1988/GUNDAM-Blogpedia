@@ -118,7 +118,7 @@ export default class PilotDetails extends Component {
             className="form-url"
             />
 
-            <button className="custom-btn">SUMBIT</button>
+            <button className="custom-btn">SUBMIT</button>
 
             {this.state.submitted && (
                 <button className="create-btn1">
