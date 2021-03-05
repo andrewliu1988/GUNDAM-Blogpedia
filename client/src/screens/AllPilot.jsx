@@ -17,7 +17,7 @@ export default class AllPilot extends Component {
 
   getAllPilots = async() => {
     try {
-    const res = await axios.get(`${BASE_URL}/pilot`)
+    const res = await axios.get(`${BASE_URL}/api/pilot`)
     this.setState({ allPilots: res.data.pilots})
   } catch (error) {
     throw error

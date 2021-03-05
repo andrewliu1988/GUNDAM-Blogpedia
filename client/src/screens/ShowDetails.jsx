@@ -25,7 +25,7 @@ export default class ShowDetails extends Component {
     getAllSuits = async() => {
       let showId = this.props.match.params.show_id
       try{
-        const res = await axios.get(`${BASE_URL}/suit/find/${showId}`)
+        const res = await axios.get(`${BASE_URL}/api/suit/find/${showId}`)
         this.setState({ allSuits: res.data.suit})
         this.setState ({ seriesId: showId})       
       } catch (error) {
@@ -37,7 +37,7 @@ export default class ShowDetails extends Component {
     getAllPilots = async () => {
       let showId = this.props.match.params.show_id
       try{
-        const res = await axios.get(`${BASE_URL}/pilot/find/${showId}`)
+        const res = await axios.get(`${BASE_URL}/api/pilot/find/${showId}`)
         this.setState({ allPilots: res.data.pilot})
         }catch (error) {
           throw error

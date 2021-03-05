@@ -17,7 +17,7 @@ export default class ShowsHome extends Component {
 
   getAllShows = async() => {
     try {
-    const res = await axios.get(`${BASE_URL}/show`)
+    const res = await axios.get(`${BASE_URL}/api/show`)
     this.setState({ allShows: res.data.shows})
   } catch (error) {
     throw error

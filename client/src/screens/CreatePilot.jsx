@@ -21,7 +21,7 @@ export default class PilotDetails extends Component {
   createPilot = async (newPilot) => {
     const pilotId = this.props.match.params.id
     try{
-      const res = await axios.post(`${BASE_URL}/show/${pilotId}/pilot`, newPilot)
+      const res = await axios.post(`${BASE_URL}/api/show/${pilotId}/pilot`, newPilot)
     } catch (error){
       throw error
     }

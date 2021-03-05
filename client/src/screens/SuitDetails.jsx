@@ -24,7 +24,7 @@ export default class SuitDetails extends Component {
   getSuitDetails = async () => {
     const suitId = this.props.match.params.id
     try{
-      const res = await axios.get(`${BASE_URL}/suit/${suitId}`)
+      const res = await axios.get(`${BASE_URL}/api/suit/${suitId}`)
       this.setState({suitDetails: res.data.suit})
     } catch (error){
       throw error
@@ -33,7 +33,7 @@ export default class SuitDetails extends Component {
 
   publishNewComment = async (newComment) => {   
     try {
-      const res = await axios.post(`${BASE_URL}/comment`,newComment )
+      const res = await axios.post(`${BASE_URL}/api/comment`,newComment )
     } catch (error) {
       throw error
     }

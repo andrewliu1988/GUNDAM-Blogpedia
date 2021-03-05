@@ -24,7 +24,7 @@ export default class PilotDetails extends Component {
   getPilotDetails = async () => {
     const pilotId = this.props.match.params.id
     try{
-      const res = await axios.get(`${BASE_URL}/pilot/get/${pilotId}`)
+      const res = await axios.get(`${BASE_URL}/api/pilot/get/${pilotId}`)
       this.setState({pilotDetails: res.data.pilot})
     } catch (error){
       throw error
@@ -35,7 +35,7 @@ export default class PilotDetails extends Component {
 
   publishNewComment = async (newComment) => {   
     try {
-      const res = await axios.post(`${BASE_URL}/comment`,newComment )
+      const res = await axios.post(`${BASE_URL}/api/comment`,newComment )
     } catch (error) {
       throw error
     }

@@ -17,7 +17,7 @@ export default class CommentBoard extends Component {
 
   getAllComment = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/Comment/get`)
+      const res = await axios.get(`${BASE_URL}/api/Comment/get`)
       this.setState({allComment: res.data.comment})
     } catch (error) {
       throw error

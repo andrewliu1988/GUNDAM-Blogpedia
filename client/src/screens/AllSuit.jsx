@@ -17,7 +17,7 @@ export default class ShowsHome extends Component {
 
   getAllSuits = async() => {
     try {
-    const res = await axios.get(`${BASE_URL}/suit`)
+    const res = await axios.get(`${BASE_URL}/api/suit`)
     this.setState({ allSuits: res.data.suits})
   } catch (error) {
     throw error
