@@ -37,6 +37,8 @@ render() {
         name={result.name}
         mediaUrl={result.media_url}
         onClick={()=> this.props.history.push(`/find/${result._id}`)}
+        pilotId={result._id}
+
        />
       )}
       </div>
