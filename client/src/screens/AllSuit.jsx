@@ -37,6 +37,7 @@ render() {
         model={result.model}
         mediaUrl={result.media_url}
         onClick={()=> this.props.history.push(`/suit/${result._id}`)}
+        suitId={result._id}
        />
       )}
       </div>

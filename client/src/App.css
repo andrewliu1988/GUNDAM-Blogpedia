@@ -304,10 +304,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
   height: auto;
   margin-left: 150px;
   margin-right: 150px;
+  padding-right: 150px;
+  padding-left: 150px;
 }
 
 .commentCard {
