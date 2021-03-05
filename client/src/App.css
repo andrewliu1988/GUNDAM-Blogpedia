@@ -385,7 +385,7 @@
 .delete-btn::after {
   content: '\f014';
   font-family: FontAwesome;
-  color: blue;
+  color: transparent;
   font-size: 20px;
   transition: font-size 150ms ease-in-out;
 }
@@ -393,6 +393,28 @@
 .delete-btn:hover::after {
   font-size: 22px;
   color: blue;
+}
+
+.delete-btn2 {
+  position: absolute;
+  bottom: 9px;
+  right: 2px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.delete-btn2::after {
+  content: '\f014';
+  font-family: FontAwesome;
+  color: blue;
+  font-size: 20px;
+  transition: font-size 150ms ease-in-out;
+}
+
+.delete-btn2:hover::after {
+  font-size: 22px;
+  color: red;
 }
 
 .suitIcon2 {

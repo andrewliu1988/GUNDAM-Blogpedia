@@ -28,7 +28,7 @@ deletePilot = async () => {
           <img src={mediaUrl} alt="gif"className="suitIcon"></img>
           <button
               onClick={this.deletePilot}
-              className="delete-btn">      
+              className="delete-btn2">      
           </button> 
         </div> : null }
       </div>

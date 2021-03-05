@@ -32,7 +32,7 @@ deleteSuit = async () => {
 
               <button
                 onClick={this.deleteSuit}
-                className="delete-btn"> 
+                className="delete-btn2"> 
               </button>          
           </div>  : null }
       </div>
