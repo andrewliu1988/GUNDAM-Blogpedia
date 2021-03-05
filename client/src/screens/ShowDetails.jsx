@@ -40,36 +40,20 @@ export default class ShowDetails extends Component {
         const res = await axios.get(`${BASE_URL}/pilot/find/${showId}`)
         this.setState({ allPilots: res.data.pilot})
         console.log(res)
-       }catch (error) {
-         throw error
+        }catch (error) {
+          throw error
        }
-    }
-
-
-    updateSuits= async () => {  
-      let updateSuit = this.state.allSuits._id
-      try{
-        const res = await axios.put(`${BASE_URL}/suit/update/${updateSuit}`)
-        const req = {
-          _id: req.body.id,
-          model: req.body.model,
-          weapons: req.body.weapons,
-          media_url: req.body.media_url,
-          description: req.body.description
-        } 
-      }catch (error) {
-        throw error
-      }
-      
     }
   
   render(){
   return (
     <div className="container">
       <section className="button-area">
-      <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn">Add Gundam to Series</button>
-      <h1 >show details</h1> 
-      <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn">Add Pilot to Series</button>
+      <h1>show details</h1> 
+        <section>
+          <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn">Add Gundam to Series</button>
+          <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn">Add Pilot to Series</button>
+        </section>
       </section>
       <div className="showDetails">
       {this.state.allSuits.map((result, index) =>
@@ -81,7 +65,9 @@ export default class ShowDetails extends Component {
           suitId={result._id}
         />
         )}
-        <div className="showDetails2">
+      </div> 
+
+      <div className="showDetails2">
           {this.state.allPilots.map((result, index)=>
           <PilotCard
             key={result._id}
@@ -91,8 +77,6 @@ export default class ShowDetails extends Component {
             pilotId={result._id}
           />)}
         </div>
-      </div> 
-
      
     </div>
   )

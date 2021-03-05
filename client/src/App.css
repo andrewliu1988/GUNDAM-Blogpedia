@@ -11,6 +11,7 @@
 }
 .container {
   height: 100vh;
+  width: 100vw;
 }
 
 .seriesbox {
@@ -39,7 +40,7 @@
   padding: 10px 10px 10px 10px;
   text-align: center;
   justify-content: center;
-  width: 225px;
+  width: 245px;
   height: 275px;
 }
 .suitCard {
@@ -48,7 +49,7 @@
   padding: 10px 10px 10px 10px;
   text-align: center;
   justify-content: center;
-  width: 225px;
+  width: 245px;
   height: 275px;
 }
 
@@ -71,6 +72,8 @@
   width: 200px;
   height: 200px;
   border-radius: 10px;
+  margin: auto;
+  margin-right: 10px;
 }
 
 .showDetails,
@@ -79,8 +82,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 10px;
-  justify-content: space-between;
-  margin: 0 auto;
+  justify-content: space-evenly;
+  /* margin: 0 auto; */
 }
 
 .add-btn {
@@ -143,7 +146,7 @@
 
 .description {
   width: 1000px;
-  -webkit-overflow-scrolling: auto;
+  -webkit-ovwerflow-scrolling: auto;
   overflow-y: scroll;
   line-height: 145%;
   size: 15px;
@@ -155,16 +158,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0;
-  top: 0;
-  width: 100vw;
+  width: 100vmax;
   height: 50px;
-
   background: rgba(242, 242, 247, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -276,12 +275,9 @@
 }
 
 .button-area {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   align-items: flex-start;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .header {
@@ -289,7 +285,6 @@
   justify-content: center;
   width: 100vw;
   margin: 2px auto;
-  /* top: 0; */
   margin-bottom: 50px;
   background: rgba(242, 242, 247, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -302,24 +297,22 @@
 .comment-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 130px;
+  padding-right: 130px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  justify-content: space-around;
-  height: auto;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding-right: 150px;
-  padding-left: 150px;
 }
 
 .commentCard {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 500px;
   align-content: center;
   width: 75px;
   border-radius: 10px;
   align-content: flex-start;
   height: 75px;
+  margin-right: 250px;
 }
 
 .commentInfo {
@@ -352,14 +345,14 @@
 .delete-btn::after {
   content: '\f014';
   font-family: FontAwesome;
-  color: rgba(148, 18, 61, 0.6);
+  color: blue;
   font-size: 20px;
   transition: font-size 150ms ease-in-out;
 }
 
 .delete-btn:hover::after {
   font-size: 22px;
-  color: rgba(148, 18, 61, 0.6);
+  color: blue;
 }
 
 .suitIcon2 {

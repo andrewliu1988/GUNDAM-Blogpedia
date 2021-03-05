@@ -24,7 +24,7 @@ export default class CommentCard extends Component {
   render() {
     const {name, comment, image} = this.props
     return (
-      <div className="comment-container">
+      <div>
         {!this.state.deleted ?
         
         <div className="commentCard"> 
