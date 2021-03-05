@@ -13,7 +13,6 @@ export default class PilotCard extends Component {
 deletePilot = async () => {
  try{
     const res = await axios.delete(`${BASE_URL}/pilot/delete/${this.props.pilotId}`)   
-    console.log(res.data)
     this.setState( { deleted: true} ) 
   }catch (error) {
     throw error

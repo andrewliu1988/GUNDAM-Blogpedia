@@ -14,7 +14,6 @@ export default class SuitCard extends Component {
 deleteSuit = async () => {
  try{
     const res = await axios.delete(`${BASE_URL}/suit/delete/${this.props.suitId}`)   
-    console.log(res.data)
     this.setState( { deleted: true} ) 
   }catch (error) {
     throw error

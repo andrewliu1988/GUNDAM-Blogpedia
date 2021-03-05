@@ -19,10 +19,8 @@ export default class SuitDetails extends Component {
   
   createSuit = async (newSuit) => {
     const suitId = this.props.match.params.id
-    console.log(this.props)
     try{
       const res = await axios.post(`${BASE_URL}/show/${suitId}/suit`, newSuit)
-      console.log(res)
     } catch (error){
       throw error
     }
@@ -44,7 +42,6 @@ export default class SuitDetails extends Component {
       media_url: this.state.image,
       description: this.state.description
     }
-    console.log(newSuit)
     this.createSuit(newSuit)
     this.setState({
       submitted: true,

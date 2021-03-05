@@ -39,7 +39,6 @@ export default class ShowDetails extends Component {
       try{
         const res = await axios.get(`${BASE_URL}/pilot/find/${showId}`)
         this.setState({ allPilots: res.data.pilot})
-        console.log(res)
         }catch (error) {
           throw error
        }

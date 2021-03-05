@@ -18,7 +18,6 @@ export default class ShowsHome extends Component {
   getAllSuits = async() => {
     try {
     const res = await axios.get(`${BASE_URL}/suit`)
-    console.log(res)
     this.setState({ allSuits: res.data.suits})
   } catch (error) {
     throw error
@@ -26,21 +25,21 @@ export default class ShowsHome extends Component {
 }
 
 render() {
-  console.log(this.state.allSuits)
+
   return(
     <div className="container">
       <h1 className="header">Mobile Suits</h1>
-      <div className="seriesbox">
-      {this.state.allSuits.map((result, index) =>
-       <SuitCard
-        key={result._id}
-        model={result.model}
-        mediaUrl={result.media_url}
-        onClick={()=> this.props.history.push(`/suit/${result._id}`)}
-        suitId={result._id}
-       />
-      )}
-      </div>
+        <div className="seriesbox">
+          {this.state.allSuits.map((result, index) =>
+          <SuitCard
+            key={result._id}
+            model={result.model}
+            mediaUrl={result.media_url}
+            onClick={()=> this.props.history.push(`/suit/${result._id}`)}
+            suitId={result._id}
+          />
+        )}
+        </div>
     </div>
   )
 }

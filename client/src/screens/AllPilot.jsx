@@ -18,7 +18,6 @@ export default class AllPilot extends Component {
   getAllPilots = async() => {
     try {
     const res = await axios.get(`${BASE_URL}/pilot`)
-    console.log(res)
     this.setState({ allPilots: res.data.pilots})
   } catch (error) {
     throw error
@@ -26,7 +25,6 @@ export default class AllPilot extends Component {
 }
 
 render() {
-  console.log(this.state.allPilots)
   return(
     <div className="container">
       <h1 className="header">Pilots</h1>

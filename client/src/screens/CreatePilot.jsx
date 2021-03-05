@@ -20,10 +20,8 @@ export default class PilotDetails extends Component {
   
   createPilot = async (newPilot) => {
     const pilotId = this.props.match.params.id
-    console.log(this.props)
     try{
       const res = await axios.post(`${BASE_URL}/show/${pilotId}/pilot`, newPilot)
-      console.log(res)
     } catch (error){
       throw error
     }
@@ -46,7 +44,6 @@ export default class PilotDetails extends Component {
       media_url: this.state.image,
       description: this.state.description
     }
-    console.log(newPilot)
     this.createPilot(newPilot)
     this.setState({
       submitted: true,
@@ -136,7 +133,7 @@ export default class PilotDetails extends Component {
             <button className="create-btn"> SUBMIT </button>
 
               {this.state.submitted && (
-                <button className="custom-btn view-post">
+                <button className="custom-btn">
                   <NavLink className="view-btn" to="/">
                     VIEW ALL SERIES
                   </NavLink>
