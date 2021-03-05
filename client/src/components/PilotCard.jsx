@@ -23,9 +23,11 @@ deletePilot = async () => {
     return (
       <div>
         {!this.state.deleted ?
-        <div className="pilotCard" onClick={onClick}>
-          <h3 >{name}</h3>
-          <img src={mediaUrl} alt="gif"className="suitIcon"></img>
+        <div className="pilotCard">
+          <div onClick={onClick}>
+            <h3 >{name}</h3>
+            <img src={mediaUrl} alt="gif"className="suitIcon"></img>
+          </div>
           <button
               onClick={this.deletePilot}
               className="delete-btn2">      
