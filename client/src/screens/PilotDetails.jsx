@@ -60,8 +60,7 @@ export default class PilotDetails extends Component {
       author: '',
       comment: '',
       mediaUrl: ''
-    })
-   
+    }) 
   }
 
   updateSubmitted = () => {

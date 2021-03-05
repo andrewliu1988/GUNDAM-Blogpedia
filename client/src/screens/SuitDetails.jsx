@@ -58,8 +58,7 @@ export default class SuitDetails extends Component {
       author: '',
       comment: '',
       mediaUrl: ''
-    })
-   
+    })  
   }
 
   updateSubmitted = () => {
@@ -85,7 +84,6 @@ export default class SuitDetails extends Component {
               <p className="description">{suitInfo.description}</p>
             </section>
           </section>
-
 
           <form className="form" onSubmit={this.handleSubmit}>
 

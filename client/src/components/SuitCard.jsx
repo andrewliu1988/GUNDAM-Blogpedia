@@ -25,16 +25,15 @@ deleteSuit = async () => {
       <div>
         {!this.state.deleted ?
           <div className="suitCard">
-          <div  onClick={onClick}>
-            <img src={mediaUrl} alt="gif" className="suitIcon"></img>
-            <h3>{model}</h3>
-          </div>
+            <div  onClick={onClick}>
+              <img src={mediaUrl} alt="gif" className="suitIcon"></img>
+              <h3>{model}</h3>
+            </div>
 
-            <button
-              onClick={this.deleteSuit}
-              className="delete-btn"> 
-            </button>       
-         
+              <button
+                onClick={this.deleteSuit}
+                className="delete-btn"> 
+              </button>          
           </div>  : null }
       </div>
     )

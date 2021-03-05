@@ -85,27 +85,11 @@
   justify-content: space-evenly;
 }
 
-.add-btn1 {
-  margin-right: 200px;
-  margin-top: 20px;
-  height: 50px;
-  border-radius: 10px;
-  width: 200px;
-  font-family: 'Shippori Mincho B1', serif;
-  font-weight: bolder;
-  background: rgba(242, 242, 247, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3.5px);
-  -webkit-backdrop-filter: blur(3.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-}
-
+.add-btn1,
 .add-btn2 {
   margin-top: 20px;
   height: 50px;
   border-radius: 10px;
-  margin-bottom: 40px;
   width: 200px;
   font-family: 'Shippori Mincho B1', serif;
   font-weight: bolder;
@@ -115,6 +99,12 @@
   -webkit-backdrop-filter: blur(3.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.add-btn1 {
+  margin-right: 200px;
 }
 
 .suitMedia {
@@ -124,6 +114,7 @@
   align-self: center;
   margin-right: 75px;
   border-radius: 10px;
+  margin-left: 100px;
 
   background: rgba(242, 242, 247, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -139,6 +130,7 @@
 }
 
 .suitDetails {
+  width: 770px;
   background: rgba(242, 242, 247, 0.3);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -170,7 +162,7 @@
 }
 
 .description {
-  width: 1000px;
+  width: 750px;
   -webkit-ovwerflow-scrolling: auto;
   overflow-y: scroll;
   line-height: 145%;
@@ -263,7 +255,7 @@
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 700px;
+  width: 600px;
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: black;
@@ -408,10 +400,5 @@
 .suitIcon2 {
   width: 200px;
   height: 200px;
-  border-radius: 10px;
-  padding-bottom: 10px;
-  align-self: flex-end;
-  align-content: flex-end;
-  justify-content: flex-end;
-  bottom: 5px;
+  padding-bottom: 20px;
 }

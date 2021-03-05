@@ -29,13 +29,13 @@ export default class CommentCard extends Component {
         <div className="commentCard"> 
  
           <section className="commentInfo">
-          <h3>{name}</h3>
-          <p className="comments">{comment}</p> 
-          <button
-            onClick={this.deleteComment}
-            className="delete-btn">      
-          </button>
-          <img src={image} alt="gif"className="suitIcon2"></img>     
+            <h3>{name}</h3>
+            <p className="comments">{comment}</p> 
+            <button
+              onClick={this.deleteComment}
+              className="delete-btn">      
+            </button>
+            <img src={image} alt="gif"className="suitIcon2"></img>     
           </section>
 
           

@@ -52,8 +52,7 @@ export default class PilotDetails extends Component {
       mehca: '',
       image: '',
       description: ''
-    })
-   
+    })  
   }
 
   updateSubmitted = () => {
@@ -71,7 +70,6 @@ export default class PilotDetails extends Component {
         <h1 className="header">CREATE PILOT</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
-
             <input
               name="name"
               type="text"
@@ -81,9 +79,6 @@ export default class PilotDetails extends Component {
               maxLength="144"
               className='create-author'
             />
-
-
-
 
             <input 
               name="age"
@@ -105,7 +100,6 @@ export default class PilotDetails extends Component {
               className="create-author"
             />
 
-
             <textarea 
               name="description"
               type="text"
@@ -114,9 +108,6 @@ export default class PilotDetails extends Component {
               onChange={this.handleChange}
               className="create-text"
             />
-
-
-
 
             <input
               name="image" 
@@ -127,11 +118,7 @@ export default class PilotDetails extends Component {
               className="create-url"
             />
 
-
-
-
             <button className="create-btn"> SUBMIT </button>
-
               {this.state.submitted && (
                 <button className="custom-btn">
                   <NavLink className="view-btn" to="/">
@@ -139,7 +126,6 @@ export default class PilotDetails extends Component {
                   </NavLink>
                 </button>)}
           </form>
-
 
           
       </div>

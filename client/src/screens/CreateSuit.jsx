@@ -49,8 +49,7 @@ export default class SuitDetails extends Component {
       weapons: '',
       image: '',
       description: ''
-    })
-   
+    }) 
   }
 
   updateSubmitted = () => {
@@ -68,7 +67,6 @@ export default class SuitDetails extends Component {
         <h1 className="header">CREATE SUIT</h1>
           <form className="create-form" onSubmit={this.handleSubmit}>
 
-
             <input
               name="model"
               type="text"
@@ -78,9 +76,6 @@ export default class SuitDetails extends Component {
               maxLength="144"
               className='create-author'
             />
-
-
-
 
             <textarea 
               name="weapons"
@@ -92,7 +87,6 @@ export default class SuitDetails extends Component {
               className="create-text"
             />
 
-
             <textarea 
               name="description"
               type="text"
@@ -101,9 +95,6 @@ export default class SuitDetails extends Component {
               onChange={this.handleChange}
               className="create-text"
             />
-
-
-
 
             <input
               name="image" 
@@ -114,11 +105,7 @@ export default class SuitDetails extends Component {
               className="create-url"
             />
 
-
-
-
             <button className="create-btn">SUBMIT</button>
-
             {this.state.submitted && (
                 <button className="create-btn">
                   <NavLink className="view-btn" to="/">

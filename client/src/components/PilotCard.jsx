@@ -22,7 +22,7 @@ deletePilot = async () => {
     const {name, mediaUrl, onClick} = this.props 
     return (
       <div>
-         {!this.state.deleted ?
+        {!this.state.deleted ?
         <div className="pilotCard" onClick={onClick}>
           <h3 >{name}</h3>
           <img src={mediaUrl} alt="gif"className="suitIcon"></img>

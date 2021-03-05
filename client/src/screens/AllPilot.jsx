@@ -28,17 +28,16 @@ render() {
   return(
     <div className="container">
       <h1 className="header">PILOTS</h1>
-      <div className="seriesbox">
-      {this.state.allPilots.map((result, index) =>
-       <PilotCard
-        key={result._id}
-        name={result.name}
-        mediaUrl={result.media_url}
-        onClick={()=> this.props.history.push(`/find/${result._id}`)}
-        pilotId={result._id}
-
-       />
-      )}
+        <div className="seriesbox">
+          {this.state.allPilots.map((result, index) =>
+          <PilotCard
+            key={result._id}
+            name={result.name}
+            mediaUrl={result.media_url}
+            onClick={()=> this.props.history.push(`/find/${result._id}`)}
+            pilotId={result._id}
+          />
+          )}
       </div>
     </div>
   )

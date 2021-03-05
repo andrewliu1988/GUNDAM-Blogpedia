@@ -10,7 +10,10 @@
 
 ### **Description**
 
-Gundam API is a database for all Gundam fans to can freely add fan creation or add additional gundam info. Fan can also interact with each other through  comments. 
+Gundam API is a database for all Gundam fans who can freely update and post comment about Gundam. Gundam fans can share their own custom image or gif to the database.
+A combination of encyclopedia and blogpost.  
+
+
 ***
 
 ### **Technologies**
@@ -33,14 +36,12 @@ I used Trello to keep track of my development progress, [click here](https://tre
 
 #### Original Design
 
-<!-- ![Starting Concept] -->
+![Starting Concept](images/Screen%20Shot%202021-03-05%20at%2011.13.56%20AM.png)
 
 ***
 
 #### Final Product
-<!-- ![]
-![] -->
-
+![HOMEPAGE](images/Screen%20Shot%202021-03-05%20at%2010.57.47%20AM.png) 
 
 ***
 
@@ -52,5 +53,17 @@ I used Trello to keep track of my development progress, [click here](https://tre
 
 ### Credits: 
 
+Image and GIF used Database: [DuckDuckGo](https://duckduckgo.com/)
 
+Background Img [Unsplash@Bruce Tang](https://unsplash.com/photos/nKO_1QyFh9o) 
+
+Gundam Info and Img: [Gundam Fandom](https://gundam.fandom.com/wiki/The_Gundam_Wiki)
+
+Delete Icon: [Font Awesome](https://fontawesome.com/v4.7.0/icons/)
+
+[Glassmorphism](https://glassmorphism.com/)
+
+Fonts: [Google Fonts](https://fonts.google.com/specimen/Shippori+Mincho+B1?subset=japanese&preview.text=%E5%BD%BC%E3%82%89%E3%81%AE%E6%A9%9F%E5%99%A8%E3%82%84%E8%A3%85%E7%BD%AE%E3%81%AF%E3%81%99%E3%81%B9%E3%81%A6%E7%94%9F%E5%91%BD%E4%BD%93%E3%81%A0%E3%80%82&preview.text_type=custom)
+
+Techologies Icon: [Github](https://github.com/SEI-R-1-25/u2_project_prompt)
 

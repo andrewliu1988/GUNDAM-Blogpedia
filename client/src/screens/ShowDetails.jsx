@@ -41,17 +41,17 @@ export default class ShowDetails extends Component {
         this.setState({ allPilots: res.data.pilot})
         }catch (error) {
           throw error
-       }
+      }
     }
   
   render(){
   return (
     <div className="container">
       <h1 className="header">CHARACTER / PILOT</h1> 
-      <section className="button-area">
-          <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn1">Add Gundam to Series</button>
-          <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn2">Add Pilot to Series</button>    
-      </section>
+        <section className="button-area">
+            <button onClick={() =>this.props.history.push(`/add/suit/${this.state.seriesId}`)} className="add-btn1">Add Gundam to Series</button>
+            <button onClick={() =>this.props.history.push(`/add/pilot/${this.state.seriesId}`)} className="add-btn2">Add Pilot to Series</button>    
+        </section>
       <div className="showDetails">
       {this.state.allSuits.map((result, index) =>
         <SuitCard
@@ -73,8 +73,7 @@ export default class ShowDetails extends Component {
             onClick={()=> this.props.history.push(`/find/${result._id}`)}
             pilotId={result._id}
           />)}
-        </div>
-     
+        </div>   
     </div>
   )
 }
